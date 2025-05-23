@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CVS Capital Website - Project Documentation
 
-## Getting Started
+## Project Overview
+CVS Capital is an independent investment advisory firm run by Curtis and Creg Shaffer, operating under the Institute for Wealth Management as their RIA. This website serves as the primary marketing platform for the firm.
 
-First, run the development server:
+## Project Status: ✅ Active Development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Completed Components
+- ✅ **Homepage** - Hero, Services, About/Team, Philosophy sections
+- ✅ **Team Page** - Detailed advisor profiles with regulatory compliance
+- ✅ **Shared Advisor Data** - Centralized data source (`/src/lib/advisors.ts`)
+- ✅ **Foundation Components** - Button, Container, Section, Header, Footer
+- ✅ **Design System** - Custom color palette, responsive design
+- ✅ **SEO Optimization** - Metadata, structured layout
+
+### Current Architecture
+```
+src/
+├── app/
+│   ├── layout.tsx           # Root layout with SEO
+│   ├── page.tsx            # Homepage
+│   └── team/
+│       └── page.tsx        # Team page
+├── components/
+│   ├── ui/                 # Reusable UI components
+│   ├── layout/             # Header, Footer
+│   └── sections/           # Page sections (Hero, About, etc.)
+├── lib/
+│   ├── advisors.ts         # Shared advisor data (SINGLE SOURCE OF TRUTH)
+│   └── utils.ts           # Utility functions
+└── app/globals.css        # Global styles + Tailwind
+
+Tech Stack: Next.js 14 + TypeScript + Tailwind CSS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Advisor Data Structure
+All advisor information is centralized in `/src/lib/advisors.ts`:
+- **Creg V. Shaffer** - Senior Investment Adviser (featured first)
+- **Curtis L. Shaffer** - Technology Sector Specialist
+- Includes: contact info, credentials, CRD numbers, expertise, philosophy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Business Rules & Compliance
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### FINRA/NASAA Compliance Requirements
+- ❌ **NO TESTIMONIALS** - Removed for regulatory compliance
+- ✅ **Professional credentials** - CRD numbers, Series 65 info displayed
+- ✅ **FINRA BrokerCheck links** - Direct links to advisor profiles
+- ✅ **Transparent fee disclosure** - Clear fee structure information
+- ✅ **Risk disclosures** - Appropriate disclaimers and compliance language
+### Content Approval Process
+- **All content changes** require approval from CCO at Institute for Wealth Management
+- **No marketing claims** without compliance review
+- **Professional tone** required throughout
 
-## Learn More
+### Brand Guidelines
+- **Color Palette**: Sage greens and cream tones (see `tailwind.config.ts`)
+- **Typography**: Clean, professional sans-serif fonts
+- **Tone**: Professional, trustworthy, client-focused
+- **Style**: Matches Institute for Wealth Management aesthetic
 
-To learn more about Next.js, take a look at the following resources:
+## Development Standards
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Code Quality Standards
+- **TypeScript**: Strict typing, interfaces for all data structures
+- **ESLint**: Enforced linting rules, no console.log in production
+- **Component Architecture**: Reusable, well-documented components
+- **Single Source of Truth**: Centralized data management
+- **Mobile-First**: Responsive design for all components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### File Naming Conventions
+- **Components**: PascalCase (`Button.tsx`, `HeroSection.tsx`)
+- **Files**: kebab-case (`advisor-data.ts`, `about-section.tsx`)
+- **Directories**: lowercase (`components`, `sections`, `ui`)
 
-## Deploy on Vercel
+### Git Workflow
+- **Feature branches** for new functionality
+- **Descriptive commit messages**
+- **Test builds** before deployment
+- **Vercel deployment** from main branch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Current Priorities (In Order)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. Contact Functionality (Next Phase)
+- Contact form with validation (React Hook Form + Zod)
+- EmailJS integration for form submissions
+- Lead capture for marketing purposes
+- Success/error states and user feedback
+
+### 2. Content Pages
+- Dedicated Services page
+- About page (expanded)
+- Contact page with office information
+- Legal/compliance pages
+
+### 3. Blog System
+- Content management setup
+- Market insights and educational content
+- SEO-optimized blog structure
+
+## Key Contacts & Roles
+- **Curtis Shaffer**: Site maintainer, primary technical contact
+- **Creg Shaffer**: Senior advisor, content reviewer
+- **Institute for Wealth Management CCO**: Content approval authority
+
+## Important File Locations
+- **Advisor Data**: `/src/lib/advisors.ts` (SINGLE SOURCE OF TRUTH)
+- **Color Palette**: `/tailwind.config.ts`
+- **Global Styles**: `/src/app/globals.css`
+- **Component Library**: `/src/components/ui/`
+
+## Development Commands
+```bash
+npm run dev          # Start development server
+npm run build        # Production build
+npm run lint         # Run ESLint
+npm run type-check   # TypeScript validation
+```
+
+## Deployment
+- **Platform**: Vercel
+- **Domain**: TBD
+- **Build**: Automatic deployment from main branch
+- **Environment**: Production optimized
+
+---
+*Last Updated: Current session*
+*Maintainer: Curtis Shaffer*
