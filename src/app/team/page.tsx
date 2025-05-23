@@ -230,7 +230,7 @@ export default function TeamPage() {
               <Button variant="secondary" size="lg">
                 Schedule Consultation
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="secondary" size="lg">
                 Learn About Our Services
               </Button>
             </div>
