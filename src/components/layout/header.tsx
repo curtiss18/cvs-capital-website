@@ -24,7 +24,7 @@ export function Header() {
       <div className="bg-sage-400 text-white py-2">
         <Container>
           <div className="flex justify-between items-center text-sm">
-            <span>(775) 309-7092 or Main Office (303) 572-3500</span>
+            <span>Main Office (303) 572-3500</span>
             <div className="hidden md:flex space-x-4">
               <Link href="/about" className="hover:text-sage-100 transition-colors">
                 Meet The Team

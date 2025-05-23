@@ -17,7 +17,7 @@ export function Section({
 }: SectionProps) {
   const variants = {
     default: "bg-white",
-    sage: "bg-sage-400 text-white",
+    sage: "bg-sage-600 text-white",
     cream: "bg-cream-100"
   }
 
@@ -28,7 +28,7 @@ export function Section({
     xl: "py-24 lg:py-32"
   }
 
-  const waveColor = variant === "sage" ? "%238FA68E" : variant === "cream" ? "%23f8f6f3" : "%23ffffff"
+  const waveColor = variant === "sage" ? "%23888965" : variant === "cream" ? "%23E9EBE4" : "%23ffffff"
 
   return (
     <section

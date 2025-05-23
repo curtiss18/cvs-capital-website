@@ -4,26 +4,36 @@ import { Section } from "@/components/ui/section"
 export function AboutSection() {
   const advisors = [
     {
-      name: "Curtis L. Shaffer",
-      role: "Investment Adviser Representative",
-      education: "Bachelor's in Business Administration, Brigham Young University",
-      description: "Curtis brings technology sector expertise and analytical market insight to help clients navigate complex investment decisions. His background includes experience with day trading and strategic market analysis.",
-      contact: {
-        email: "curtiss@instituteforwealth.com",
-        phone: "(775) 309-7092"
-      },
-      initials: "CS"
-    },
-    {
       name: "Creg V. Shaffer", 
       role: "Investment Adviser Representative",
+      education: "Master's in Economics, Iowa State University",
       credentials: "Series 65 Certified Since 2006",
       description: "With extensive business management experience and nearly two decades in financial services, Creg provides strategic wealth management guidance focused on sustainable long-term growth strategies.",
+      contact: {
+        email: "cregs@instituteforwealth.com",
+        phone: "(775) 315-7594"
+      },
       details: {
         crd: "5070346",
         licensed: "2006"
       },
       initials: "CVS"
+    },
+    {
+      name: "Curtis L. Shaffer",
+      role: "Investment Adviser Representative",
+      education: "Bachelor's in Business Administration, Brigham Young University",
+      credentials: "Series 65 Certified Since 2025",
+      description: "Curtis brings technology sector expertise and analytical market insight to help clients navigate complex investment decisions. His background includes experience with day trading and strategic market analysis.",
+      contact: {
+        email: "curtiss@instituteforwealth.com",
+        phone: "(775) 309-7092"
+      },
+      details: {
+        crd: "5601482",
+        licensed: "2025"
+      },
+      initials: "CLS"
     }
   ]
 
@@ -68,24 +78,12 @@ export function AboutSection() {
               
               {/* Contact/Details */}
               <div className="text-sm text-sage-100 space-y-1">
-                {advisor.contact && (
-                  <>
-                    <p><strong>Email:</strong> {advisor.contact.email}</p>
-                    <p><strong>Phone:</strong> {advisor.contact.phone}</p>
-                  </>
-                )}
-                {advisor.details && (
-                  <>
-                    <p><strong>CRD#:</strong> {advisor.details.crd}</p>
-                    <p><strong>Licensed Since:</strong> {advisor.details.licensed}</p>
-                  </>
-                )}
-                {advisor.credentials && (
-                  <p><strong>{advisor.credentials}</strong></p>
-                )}
-                {advisor.education && (
-                  <p><strong>Education:</strong> {advisor.education}</p>
-                )}
+                <p><strong>Education:</strong> {advisor.education}</p>
+                <p><strong>Credentials:</strong> {advisor.credentials}</p>
+                <p><strong>Email:</strong> {advisor.contact.email}</p>
+                <p><strong>Phone:</strong> {advisor.contact.phone}</p>
+                <p><strong>CRD#:</strong> {advisor.details.crd}</p>
+                <p><strong>Licensed Since:</strong> {advisor.details.licensed}</p>
               </div>
             </div>
           ))}
