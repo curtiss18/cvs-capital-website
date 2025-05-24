@@ -71,10 +71,10 @@ src/
 │   ├── layout.tsx         # Root layout with SEO
 │   ├── page.tsx          # Homepage
 │   ├── sections/         # Homepage-specific sections
-│   │   ├── hero-section.tsx
-│   │   ├── services-section.tsx
-│   │   ├── about-section.tsx    # Clickable advisor cards
-│   │   └── philosophy-section.tsx
+│   │   ├── hero.tsx
+│   │   ├── services.tsx
+│   │   ├── about.tsx      # Clickable advisor cards
+│   │   └── philosophy.tsx
 │   ├── services/
 │   │   └── page.tsx      # Complete services with strategies
 │   └── team/

@@ -18,10 +18,10 @@ src/
 │   ├── layout.tsx         # Root layout with SEO metadata
 │   ├── page.tsx          # Homepage
 │   ├── sections/         # Homepage-specific sections
-│   │   ├── hero-section.tsx
-│   │   ├── services-section.tsx
-│   │   ├── about-section.tsx
-│   │   └── philosophy-section.tsx
+│   │   ├── hero.tsx
+│   │   ├── services.tsx
+│   │   ├── about.tsx
+│   │   └── philosophy.tsx
 │   ├── services/
 │   │   └── page.tsx      # Services page with investment strategies
 │   └── team/
