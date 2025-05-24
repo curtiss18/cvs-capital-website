@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
@@ -19,9 +20,11 @@ export function TeamContact() {
             <Button variant="secondary" size="lg">
               Schedule Consultation
             </Button>
-            <Button variant="secondary" size="lg">
-              Learn About Our Services
-            </Button>
+            <Link href="/services">
+              <Button variant="secondary" size="lg">
+                Learn About Our Services
+              </Button>
+            </Link>
           </div>
           <div className="mt-8 pt-8 border-t border-sage-500/30">
             <p className="text-sage-100 mb-4">Contact Our Team Directly:</p>
