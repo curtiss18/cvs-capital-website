@@ -76,7 +76,15 @@ src/
 │   │   ├── about.tsx      # Clickable advisor cards
 │   │   └── philosophy.tsx
 │   ├── services/
-│   │   └── page.tsx      # Complete services with strategies
+│   │   ├── page.tsx      # Services page
+│   │   └── sections/     # Services-specific sections
+│   │       ├── hero.tsx
+│   │       ├── core-services.tsx
+│   │       ├── strategies.tsx
+│   │       ├── process.tsx
+│   │       ├── fees.tsx
+│   │       ├── compliance.tsx
+│   │       └── cta.tsx
 │   └── team/
 │       ├── page.tsx      # Team page
 │       └── sections/     # Team-specific sections

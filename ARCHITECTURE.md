@@ -23,7 +23,15 @@ src/
 │   │   ├── about.tsx
 │   │   └── philosophy.tsx
 │   ├── services/
-│   │   └── page.tsx      # Services page with investment strategies
+│   │   ├── page.tsx      # Services page with investment strategies
+│   │   └── sections/     # Services-specific sections
+│   │       ├── hero.tsx
+│   │       ├── core-services.tsx
+│   │       ├── strategies.tsx
+│   │       ├── process.tsx
+│   │       ├── fees.tsx
+│   │       ├── compliance.tsx
+│   │       └── cta.tsx
 │   └── team/
 │       ├── page.tsx      # Team page with detailed profiles
 │       └── sections/     # Team-specific sections
