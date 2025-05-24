@@ -24,7 +24,7 @@ export function Header() {
           <div className="flex justify-between items-center text-sm">
             <span>Main Office (303) 572-3500</span>
             <div className="hidden md:flex space-x-4">
-              <Link href="/about" className="hover:text-sage-100 transition-colors">
+              <Link href="/team" className="hover:text-sage-100 transition-colors">
                 Meet The Team
               </Link>
               <span>|</span>

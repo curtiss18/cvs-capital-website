@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
+import { Mail, Phone } from "lucide-react"
 import { advisors } from "@/lib/advisors"
 
 export function TeamContact() {
@@ -33,8 +34,24 @@ export function TeamContact() {
                 <div key={index} className="text-center">
                   <h4 className="text-white font-medium mb-2">{advisor.name}</h4>
                   <div className="space-y-1 text-sm text-sage-100">
-                    <div>{advisor.contact.phone}</div>
-                    <div>{advisor.contact.email}</div>
+                    <div>
+                      <a 
+                        href={`tel:${advisor.contact.phone}`}
+                        className="hover:text-white transition-colors cursor-pointer flex items-center justify-center"
+                      >
+                        <Phone className="h-4 w-4 mr-2" />
+                        {advisor.contact.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <a 
+                        href={`mailto:${advisor.contact.email}`}
+                        className="hover:text-white transition-colors cursor-pointer flex items-center justify-center"
+                      >
+                        <Mail className="h-4 w-4 mr-2" />
+                        {advisor.contact.email}
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
