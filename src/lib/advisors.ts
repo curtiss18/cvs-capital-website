@@ -26,7 +26,7 @@ export const advisors: Advisor[] = [
     name: "Creg V Shaffer",
     role: "Senior Investment Adviser Representative",
     title: "Principal & Co-Founder",
-    education: "Master's in Economics, Iowa State University",
+    education: "MS in Economics, Iowa State University",
     credentials: "Series 65 Certified Since 2006",
     experience: "18+ Years in Financial Services",
     contact: {
@@ -56,7 +56,7 @@ export const advisors: Advisor[] = [
     name: "Curtis L. Shaffer", 
     role: "Investment Adviser Representative",
     title: "Technology Sector Specialist & Co-Founder",
-    education: "Bachelor's in Business Administration, Brigham Young University",
+    education: "BS in Business Administration, Brigham Young University",
     credentials: "Series 65 Certified Since 2025",
     experience: "Technology Sector Expertise",
     contact: {

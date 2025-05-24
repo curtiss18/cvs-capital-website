@@ -63,7 +63,8 @@ export default function TeamPage() {
             {advisors.map((advisor, index) => (
               <div
                 key={index}
-                className={`grid lg:grid-cols-12 gap-8 items-start ${
+                id={`advisor-${advisor.name.toLowerCase().replace(/\s+/g, '-')}`}
+                className={`scroll-mt-32 grid lg:grid-cols-12 gap-8 items-start ${
                   index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
                 }`}
               >
