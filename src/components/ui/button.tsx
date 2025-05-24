@@ -11,9 +11,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = "inline-flex items-center justify-center font-medium tracking-wide uppercase text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none"
     
     const variants = {
-      primary: "bg-sage-400 hover:bg-sage-500 text-white focus:ring-sage-400 hover:-translate-y-0.5",
-      secondary: "border-2 border-white text-white hover:bg-white hover:text-neutral-800 focus:ring-white hover:-translate-y-0.5",
-      outline: "border-2 border-sage-400 text-sage-400 hover:bg-sage-400 hover:text-white focus:ring-sage-400 hover:-translate-y-0.5"
+      primary: "bg-sage-400 hover:bg-sage-500 text-white focus:ring-sage-400",
+      secondary: "border-2 border-white text-white hover:bg-white hover:text-neutral-800 focus:ring-white",
+      outline: "border-2 border-sage-400 text-sage-400 hover:bg-sage-400 hover:text-white focus:ring-sage-400"
     }
     
     const sizes = {

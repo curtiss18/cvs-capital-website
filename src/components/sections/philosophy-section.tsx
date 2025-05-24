@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section"
 
 export function PhilosophySection() {
   return (
-    <Section variant="cream" padding="xl" wave="top">
+    <Section variant="cream" padding="xl">
       <Container>
         <div className="text-center max-w-5xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-light text-neutral-800 mb-8">

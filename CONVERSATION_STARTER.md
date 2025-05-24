@@ -34,6 +34,6 @@ cd "C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website"
 npm run dev
 ```
 
-Please review README.md for full details before starting.
+Please review README.md for full details before starting. Don't start coding.  Check with me to see what we are going to work on first.
 
 ---

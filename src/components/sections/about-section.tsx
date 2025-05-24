@@ -5,7 +5,7 @@ import { advisors } from "@/lib/advisors"
 export function AboutSection() {
 
   return (
-    <Section variant="sage" padding="xl" wave="top">
+    <Section variant="sage" padding="xl">
       <Container>
         {/* Section Header */}
         <div className="text-center mb-16">

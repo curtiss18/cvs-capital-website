@@ -8,7 +8,7 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <Section variant="sage" padding="xl" wave="bottom">
+      <Section variant="sage" padding="xl">
         <Container>
           <div className="text-center">
             <h1 className="text-5xl lg:text-6xl font-light text-white mb-6">

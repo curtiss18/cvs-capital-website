@@ -14,7 +14,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <Section variant="cream" padding="xl" wave="top">
+    <Section variant="cream" padding="xl">
       <Container>
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -34,7 +34,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 lg:p-12 border-3 border-neutral-200 hover:border-sage-400 transition-all duration-300 hover:-translate-y-1 text-center group"
+              className="bg-white p-8 lg:p-12 border-3 border-neutral-200 hover:border-sage-400 transition-all duration-300 text-center group"
             >
               <h3 className="text-2xl lg:text-3xl font-normal text-neutral-800 mb-6 group-hover:text-sage-400 transition-colors">
                 {service.title}
