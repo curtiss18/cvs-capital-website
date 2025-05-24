@@ -140,7 +140,7 @@ export function ContactForm() {
   }
 
   return (
-    <Section variant="default" padding="xl">
+    <Section variant="default" padding="xl" id="contact-form" className="scroll-mt-32">
       <Container>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

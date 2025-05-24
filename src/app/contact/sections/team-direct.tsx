@@ -6,7 +6,7 @@ import { advisors } from "@/lib/advisors"
 
 export function TeamDirect() {
   return (
-    <Section variant="default" padding="xl">
+    <Section variant="default" padding="xl" id="team-direct" className="scroll-mt-32">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-light text-neutral-800 mb-6">
@@ -35,8 +35,8 @@ export function TeamDirect() {
                       href={`tel:${advisor.contact.phone}`}
                       className="flex items-center justify-center text-sage-600 hover:text-sage-700 transition-colors"
                     >
-                      <Phone className="h-4 w-4 mr-2" />
-                      {advisor.contact.phone}
+                      <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
+                      <span className="break-all">{advisor.contact.phone}</span>
                     </a>
                   </div>
                   <div>
@@ -44,8 +44,8 @@ export function TeamDirect() {
                       href={`mailto:${advisor.contact.email}`}
                       className="flex items-center justify-center text-sage-600 hover:text-sage-700 transition-colors"
                     >
-                      <Mail className="h-4 w-4 mr-2" />
-                      {advisor.contact.email}
+                      <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
+                      <span className="break-all text-sm">{advisor.contact.email}</span>
                     </a>
                   </div>
                 </div>

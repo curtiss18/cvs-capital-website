@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone } from "lucide-react"
 
 export function OfficeInfo() {
   return (
-    <Section variant="cream" padding="xl">
+    <Section variant="cream" padding="xl" id="office-info" className="scroll-mt-32">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-light text-neutral-800 mb-6">

@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card"
 
 export function TeamOverview() {
   return (
-    <Section variant="cream" padding="lg">
+    <Section variant="cream" padding="lg" id="team-overview" className="scroll-mt-32">
       <Container>
         <div className="grid lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-2">

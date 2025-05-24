@@ -6,7 +6,7 @@ import { advisors } from "@/lib/advisors"
 
 export function AdvisorProfiles() {
   return (
-    <Section variant="default" padding="xl">
+    <Section variant="default" padding="xl" id="advisor-profiles" className="scroll-mt-32">
       <Container>
         <div className="space-y-16">
           {advisors.map((advisor, index) => (
