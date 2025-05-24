@@ -26,10 +26,7 @@ src/
 │   │   ├── button.tsx    # 3 variants, no hover translations
 │   │   ├── card.tsx      # Reusable card with sage borders
 │   │   ├── container.tsx # Responsive width management
-│   │   ├── section.tsx   # Clean sections (no wave effects)
-│   │   ├── input.tsx     # Form inputs (ready for contact form)
-│   │   ├── textarea.tsx  # Form textareas
-│   │   └── select.tsx    # Form selects
+│   │   └── section.tsx   # Clean sections (no wave effects)
 │   ├── layout/           # Layout components
 │   │   ├── header.tsx    # Navigation with services link
 │   │   └── footer.tsx    # Site footer

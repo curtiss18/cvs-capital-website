@@ -110,12 +110,18 @@ All advisor information is centralized in `/src/lib/advisors.ts`:
 ### Component Architecture
 ```
 UI Components:
+```
+UI Components:
 ├── Button (3 variants: primary, secondary, outline)
 ├── Card (flexible padding, hover effects, sage borders)
 ├── Container (responsive width management)
 ├── Section (variant styling for different page sections)
-├── Input/Textarea/Select (form components for future contact form)
 └── Header/Footer (navigation and site structure)
+
+Form Components (To Be Created):
+├── Input (form text inputs)
+├── Textarea (form text areas)
+└── Select (form dropdowns)
 ```
 
 ### File Naming Conventions

@@ -79,10 +79,7 @@ src/
 │   │   ├── button.tsx    # 3 variants, professional styling
 │   │   ├── card.tsx      # Main content card component
 │   │   ├── container.tsx # Responsive width management
-│   │   ├── section.tsx   # Page section wrapper
-│   │   ├── input.tsx     # Form input (ready for contact form)
-│   │   ├── textarea.tsx  # Form textarea
-│   │   └── select.tsx    # Form select
+│   │   └── section.tsx   # Page section wrapper
 │   ├── layout/           # Site structure
 │   │   ├── header.tsx    # Navigation with services link
 │   │   └── footer.tsx    # Site footer
@@ -103,7 +100,11 @@ src/
 - `react-hook-form`: Form state management
 - `zod`: Schema validation  
 - `emailjs-com`: Email service integration
-- Form components: Input, Textarea, Select already built
+
+**Form Components Needed:**
+- Input component for text fields
+- Textarea component for message fields  
+- Select component for dropdown fields
 
 ### Future Enhancements
 - About page (company history)

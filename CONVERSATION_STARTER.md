@@ -43,7 +43,7 @@ Copy this prompt to start new conversations:
 **Ready Features:**
 - Form validation: React Hook Form + Zod
 - Email integration: EmailJS configured
-- Form components: Input, Textarea, Select already built
+- Form components: Need to create Input, Textarea, Select for contact form
 
 **Commands:**
 ```bash
@@ -51,7 +51,7 @@ cd "C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website"
 npm run dev
 ```
 
-**Instructions:** Please review README.md and ARCHITECTURE.md for full technical details before starting. Don't start coding until we discuss what to work on next.
+**Instructions:** Please review README.md, ARCHITECTURE.md, and SETUP.md for full technical details before starting. Don't start coding until we discuss what to work on next.
 
 ---
 
