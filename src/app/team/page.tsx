@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 import { Mail, Phone, Award, GraduationCap, TrendingUp } from "lucide-react"
 import { advisors } from "@/lib/advisors"
 
@@ -42,14 +43,14 @@ export default function TeamPage() {
               </p>
             </div>
             <div className="space-y-6">
-              <div className="text-center p-6 bg-white border-2 border-sage-200 hover:border-sage-300 transition-colors">
+              <Card padding="md" className="text-center">
                 <div className="text-3xl font-light text-sage-600 mb-2">18+</div>
                 <div className="text-sm uppercase tracking-wide text-neutral-600">Years Combined Experience</div>
-              </div>
-              <div className="text-center p-6 bg-white border-2 border-sage-200 hover:border-sage-300 transition-colors">
+              </Card>
+              <Card padding="md" className="text-center">
                 <div className="text-3xl font-light text-sage-600 mb-2">2</div>
                 <div className="text-sm uppercase tracking-wide text-neutral-600">Series 65 Professionals</div>
-              </div>
+              </Card>
             </div>
           </div>
         </Container>
@@ -91,7 +92,8 @@ export default function TeamPage() {
 
                 {/* Content Column */}
                 <div className={`lg:col-span-8 ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
-                  <div className="space-y-6">
+                  <Card>
+                    <div className="space-y-6">
                     {/* Header */}
                     <div>
                       <h3 className="text-3xl lg:text-4xl font-light text-neutral-800 mb-2">
@@ -161,7 +163,8 @@ export default function TeamPage() {
                       <h4 className="text-lg font-medium text-neutral-800 mb-3">Professional Interests</h4>
                       <p className="text-neutral-600">{advisor.interests}</p>
                     </div>
-                  </div>
+                    </div>
+                  </Card>
                 </div>
               </div>
             ))}
@@ -183,7 +186,7 @@ export default function TeamPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {advisors.map((advisor, index) => (
-              <div key={index} className="bg-white p-8 border-2 border-sage-200">
+              <Card key={index}>
                 <h3 className="text-xl font-medium text-neutral-800 mb-4">{advisor.name}</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
@@ -209,7 +212,7 @@ export default function TeamPage() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </Container>

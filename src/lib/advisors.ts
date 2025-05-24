@@ -23,7 +23,7 @@ export interface Advisor {
 
 export const advisors: Advisor[] = [
   {
-    name: "Creg V. Shaffer",
+    name: "Creg V Shaffer",
     role: "Senior Investment Adviser Representative",
     title: "Principal & Co-Founder",
     education: "Master's in Economics, Iowa State University",
@@ -60,7 +60,7 @@ export const advisors: Advisor[] = [
     credentials: "Series 65 Certified Since 2025",
     experience: "Technology Sector Expertise",
     contact: {
-      email: "curtiss@instituteforwealth.com",
+      email: "curtis.shaffer@instituteforwealth.com",
       phone: "(775) 309-7092"
     },
     details: {

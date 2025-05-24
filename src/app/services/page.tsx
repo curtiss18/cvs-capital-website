@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import {  
   PieChart, 
@@ -191,7 +192,7 @@ export default function ServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {coreServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-lg border border-neutral-200 hover:shadow-xl transition-shadow">
+              <Card key={index}>
                 <div className="text-sage-500 mb-4">
                   {service.icon}
                 </div>
@@ -209,7 +210,7 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Card>
             ))}
           </div>
         </Container>
@@ -230,7 +231,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {investmentStrategies.map((strategy, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg border border-neutral-200">
+              <Card key={index} padding="md">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-neutral-900">
                     {strategy.name}
@@ -266,7 +267,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </Container>
@@ -339,7 +340,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg border border-neutral-200">
+              <Card>
                 <div className="flex items-center mb-4">
                   <DollarSign className="h-6 w-6 text-sage-500 mr-3" />
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -368,9 +369,9 @@ export default function ServicesPage() {
                     Pro-rated refunds for early termination
                   </li>
                 </ul>
-              </div>
+              </Card>
 
-              <div className="bg-white rounded-lg p-8 shadow-lg border border-neutral-200">
+              <Card>
                 <div className="flex items-center mb-4">
                   <Calculator className="h-6 w-6 text-sage-500 mr-3" />
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -399,10 +400,10 @@ export default function ServicesPage() {
                     Fee collected upon agreement execution
                   </li>
                 </ul>
-              </div>
+              </Card>
             </div>
 
-            <div className="mt-8 bg-white rounded-lg p-6 border border-sage-200">
+            <Card padding="md" className="mt-8">
               <div className="flex items-start">
                 <Banknote className="h-6 w-6 text-sage-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
@@ -419,7 +420,7 @@ export default function ServicesPage() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </Container>
       </Section>
