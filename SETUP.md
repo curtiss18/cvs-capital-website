@@ -78,7 +78,13 @@ src/
 │   ├── services/
 │   │   └── page.tsx      # Complete services with strategies
 │   └── team/
-│       └── page.tsx      # Team profiles with linking
+│       ├── page.tsx      # Team page
+│       └── sections/     # Team-specific sections
+│           ├── hero.tsx
+│           ├── overview.tsx
+│           ├── profiles.tsx
+│           ├── credentials.tsx
+│           └── contact.tsx
 ├── components/
 │   ├── ui/               # Reusable UI components
 │   │   ├── button.tsx    # 3 variants, professional styling

@@ -17,6 +17,7 @@ Copy this prompt to start new conversations:
 - ✅ **Navigation & Linking** - homepage advisor cards link to team profiles
 - ✅ **Shared advisor data** in `/src/lib/advisors.ts` (SINGLE SOURCE OF TRUTH)
 - ✅ **Next.js 14 + TypeScript + Tailwind** with custom design system
+- ✅ **Modular Section Architecture** - Pages split into co-located section components
 
 **Project Path:** `C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website`
 

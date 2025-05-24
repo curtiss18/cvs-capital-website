@@ -25,7 +25,13 @@ src/
 │   ├── services/
 │   │   └── page.tsx      # Services page with investment strategies
 │   └── team/
-│       └── page.tsx      # Team page with detailed profiles
+│       ├── page.tsx      # Team page with detailed profiles
+│       └── sections/     # Team-specific sections
+│           ├── hero.tsx
+│           ├── overview.tsx
+│           ├── profiles.tsx
+│           ├── credentials.tsx
+│           └── contact.tsx
 ├── components/
 │   ├── ui/               # Base UI components
 │   │   ├── button.tsx    # 3 variants, no hover translations

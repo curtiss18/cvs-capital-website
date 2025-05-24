@@ -1,0 +1,5 @@
+export { TeamHero } from './hero'
+export { TeamOverview } from './overview'
+export { AdvisorProfiles } from './profiles'
+export { TeamCredentials } from './credentials'
+export { TeamContact } from './contact'
