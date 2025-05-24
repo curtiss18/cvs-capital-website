@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { Card } from "@/components/ui/card"
-import { MapPin, Clock, Phone, Mail } from "lucide-react"
+import { MapPin, Clock, Phone } from "lucide-react"
 
 export function OfficeInfo() {
   return (
