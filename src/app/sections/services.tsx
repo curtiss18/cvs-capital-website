@@ -1,16 +1,19 @@
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export function ServicesSection() {
   const services = [
     {
       title: "Portfolio Management",
-      description: "Whether you are an individual investor or an employer, we can help you reach your financial goals through comprehensive portfolio management and strategic asset allocation."
+      description: "Whether you are an individual investor or an employer, we can help you reach your financial goals through comprehensive portfolio management and strategic asset allocation.",
+      clickable: true
     },
     {
       title: "Financial Planning",
-      description: "Plug into our team and our technology to create comprehensive financial plans that address your unique goals, risk tolerance, and time horizon."
+      description: "Plug into our team and our technology to create comprehensive financial plans that address your unique goals, risk tolerance, and time horizon.",
+      clickable: true
     }
   ]
 
@@ -32,20 +35,31 @@ export function ServicesSection() {
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              padding="xl"
-              className="text-center"
-            >
-              <h3 className="text-2xl lg:text-3xl font-normal text-neutral-800 mb-6">
-                {service.title}
-              </h3>
-              <p className="text-lg text-neutral-600 leading-relaxed">
-                {service.description}
-              </p>
-            </Card>
-          ))}
+          {services.map((service, index) => {
+            const cardContent = (
+              <Card
+                key={index}
+                padding="xl"
+                className={`text-center ${service.clickable ? 'hover:shadow-xl transition-shadow duration-300 cursor-pointer' : ''}`}
+                hover={service.clickable}
+              >
+                <h3 className="text-2xl lg:text-3xl font-normal text-neutral-800 mb-6">
+                  {service.title}
+                </h3>
+                <p className="text-lg text-neutral-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </Card>
+            )
+
+            return service.clickable ? (
+              <Link key={index} href="/services#core-services">
+                {cardContent}
+              </Link>
+            ) : (
+              cardContent
+            )
+          })}
         </div>
       </Container>
     </Section>

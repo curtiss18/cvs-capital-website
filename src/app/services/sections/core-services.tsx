@@ -56,9 +56,9 @@ const coreServices = [
 
 export function CoreServices() {
   return (
-    <Section className="py-20">
+    <Section className="py-20" id="core-services">
       <Container>
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-mt-32">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Our Core Services
           </h2>
