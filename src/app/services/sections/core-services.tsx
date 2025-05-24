@@ -10,46 +10,55 @@ import {
 
 const coreServices = [
   {
+    id: "investment-management",
     icon: <PieChart className="h-8 w-8" />,
-    title: "Portfolio Management",
-    description: "Personalized investment management with full discretionary authority. Your dedicated advisor develops and implements customized strategies tailored to your specific goals and risk tolerance.",
+    title: "Investment Management",
+    description: "Comprehensive portfolio management services with full discretionary authority. Our experienced advisors develop customized investment strategies tailored to your specific goals, risk tolerance, and time horizon.",
     features: [
       "Full discretionary investment management",
-      "Customized portfolio construction", 
+      "Customized portfolio construction and asset allocation", 
       "Ongoing monitoring and rebalancing",
-      "Risk management and analysis"
+      "Access to institutional-quality investment strategies",
+      "Risk management and performance analysis"
     ]
   },
   {
+    id: "retirement-planning",
+    icon: <Target className="h-8 w-8" />,
+    title: "Retirement Planning",
+    description: "Strategic retirement planning services designed to help you build and preserve wealth for your golden years. From 401(k) rollovers to income distribution strategies, we guide you through every stage of retirement preparation.",
+    features: [
+      "401(k) and 403(b) rollover guidance",
+      "Retirement income distribution strategies",
+      "Social Security optimization planning",
+      "Tax-efficient retirement account management",
+      "Legacy and estate planning coordination"
+    ]
+  },
+  {
+    id: "financial-planning",
     icon: <Calculator className="h-8 w-8" />,
     title: "Financial Planning",
-    description: "Comprehensive financial planning services addressing all aspects of your financial life. From retirement planning to estate strategies, we help you build a roadmap to your goals.",
+    description: "Comprehensive financial planning services addressing all aspects of your financial life. We create detailed roadmaps to help you achieve your short-term and long-term financial objectives with confidence.",
     features: [
-      "Comprehensive financial analysis",
-      "Retirement and income planning",
-      "Estate planning strategies",
-      "Education funding planning"
+      "Comprehensive financial analysis and goal setting",
+      "Tax planning and optimization strategies",
+      "Estate planning and wealth transfer strategies",
+      "Education funding and 529 plan guidance",
+      "Insurance needs analysis and recommendations"
     ]
   },
   {
-    icon: <Target className="h-8 w-8" />,
-    title: "Specialized Strategies", 
-    description: "Access to institutional-quality investment strategies designed for specific market conditions and investor objectives. Each strategy is actively managed with disciplined risk controls.",
-    features: [
-      "ESG and socially responsible investing",
-      "Tactical sector rotation strategies", 
-      "Alternative income solutions",
-      "Growth and income equity strategies"
-    ]
-  },  {
+    id: "additional-services",
     icon: <Shield className="h-8 w-8" />,
     title: "Additional Services",
-    description: "Complementary services to support your complete financial picture, including cash management and access to private investment opportunities for qualified investors.",
+    description: "Complementary services designed to support your complete financial picture. From cash management solutions to specialized investment opportunities, we provide access to institutional-quality resources.",
     features: [
-      "FDIC-insured cash management",
-      "Private fund access (accredited investors)",
-      "Ongoing account monitoring",
-      "Regular performance reporting"
+      "FDIC-insured cash management solutions",
+      "Private investment opportunities (accredited investors)",
+      "Ongoing account monitoring and reporting",
+      "Regular portfolio performance reviews",
+      "Coordination with your existing advisors"
     ]
   }
 ]
@@ -70,7 +79,7 @@ export function CoreServices() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {coreServices.map((service, index) => (
-            <Card key={index}>
+            <Card key={index} id={service.id} className="scroll-mt-32">
               <div className="text-sage-500 mb-4">
                 {service.icon}
               </div>

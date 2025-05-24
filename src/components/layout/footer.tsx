@@ -12,30 +12,28 @@ export function Footer() {
       ]
     },
     {
+      title: "Team",
+      links: [
+        { name: "Team Overview", href: "/team#team-overview" },
+        { name: "Creg V Shaffer", href: "/team#advisor-creg-v-shaffer" },
+        { name: "Curtis L Shaffer", href: "/team#advisor-curtis-l-shaffer" }
+      ]
+    },
+    {
       title: "Services",
       links: [
-        { name: "Investment Management", href: "/services" },
-        { name: "Financial Planning", href: "/services" },
-        { name: "Retirement Planning", href: "/services" },
-        { name: "Risk Management", href: "/services" }
+        { name: "Investment Management", href: "/services#investment-management" },
+        { name: "Retirement Planning", href: "/services#retirement-planning" },
+        { name: "Financial Planning", href: "/services#financial-planning" },
+        { name: "Additional Services", href: "/services#additional-services" }
       ]
     },
     {
-      title: "Resources",
+      title: "Contact",
       links: [
-        { name: "Client Forms", href: "/resources" },
-        { name: "Market Insights", href: "/blog" },
-        { name: "Investment Strategies", href: "/resources" },
-        { name: "Performance Reports", href: "/resources" }
-      ]
-    },
-    {
-      title: "Compliance",
-      links: [
-        { name: "Form ADV Part 2A", href: "/compliance" },
-        { name: "Form ADV Part 2B", href: "/compliance" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" }
+        { name: "Contact Form", href: "/contact#contact-form" },
+        { name: "Office Location", href: "/contact#office-info" },
+        { name: "Direct Contact", href: "/contact#team-direct" }
       ]
     }
   ]
