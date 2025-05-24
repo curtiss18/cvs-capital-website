@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -34,17 +35,19 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                className="bg-sage-400 hover:bg-sage-500 text-white px-8 py-4 text-base"
+                className="bg-sage-400 hover:bg-sage-500 text-white px-8 py-4 text-base w-full sm:w-auto"
               >
                 Get Started Today
               </Button>
-              <Button 
-                variant="secondary"
-                size="lg"
-                className="px-8 py-4 text-base"
-              >
-                Our Services
-              </Button>
+              <Link href="/services" className="w-full sm:w-auto">
+                <Button 
+                  variant="secondary"
+                  size="lg"
+                  className="px-8 py-4 text-base w-full"
+                >
+                  Our Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
