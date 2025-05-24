@@ -22,14 +22,18 @@ src/
 ├── app/
 │   ├── layout.tsx           # Root layout with SEO
 │   ├── page.tsx            # Homepage
+│   ├── sections/           # Homepage-specific sections
+│   │   ├── hero-section.tsx
+│   │   ├── services-section.tsx
+│   │   ├── about-section.tsx
+│   │   └── philosophy-section.tsx
 │   ├── services/
 │   │   └── page.tsx        # Services page with investment strategies
 │   └── team/
 │       └── page.tsx        # Team page with detailed profiles
 ├── components/
 │   ├── ui/                 # Reusable UI components (Button, Card, etc.)
-│   ├── layout/             # Header, Footer with navigation
-│   └── sections/           # Page sections (Hero, About, etc.)
+│   └── layout/             # Header, Footer with navigation
 ├── lib/
 │   ├── advisors.ts         # Shared advisor data (SINGLE SOURCE OF TRUTH)
 │   └── utils.ts           # Utility functions (cn, formatPhoneNumber)

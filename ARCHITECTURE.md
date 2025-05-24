@@ -16,7 +16,12 @@ src/
 ├── app/                    # Next.js App Router
 │   ├── globals.css        # Global styles + Tailwind config
 │   ├── layout.tsx         # Root layout with SEO metadata
-│   ├── page.tsx          # Homepage with Card components
+│   ├── page.tsx          # Homepage
+│   ├── sections/         # Homepage-specific sections
+│   │   ├── hero-section.tsx
+│   │   ├── services-section.tsx
+│   │   ├── about-section.tsx
+│   │   └── philosophy-section.tsx
 │   ├── services/
 │   │   └── page.tsx      # Services page with investment strategies
 │   └── team/
@@ -30,11 +35,6 @@ src/
 │   ├── layout/           # Layout components
 │   │   ├── header.tsx    # Navigation with services link
 │   │   └── footer.tsx    # Site footer
-│   └── sections/         # Page sections with Card components
-│       ├── hero-section.tsx
-│       ├── about-section.tsx    # Clickable advisor cards
-│       ├── services-section.tsx # Portfolio Management & Financial Planning
-│       └── philosophy-section.tsx
 └── lib/
     ├── advisors.ts       # Advisor data (SINGLE SOURCE OF TRUTH)
     └── utils.ts         # Utility functions (cn, formatPhoneNumber)

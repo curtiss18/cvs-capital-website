@@ -69,7 +69,12 @@ npm run type-check   # TypeScript validation (strict mode)
 src/
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx         # Root layout with SEO
-│   ├── page.tsx          # Homepage with Card components
+│   ├── page.tsx          # Homepage
+│   ├── sections/         # Homepage-specific sections
+│   │   ├── hero-section.tsx
+│   │   ├── services-section.tsx
+│   │   ├── about-section.tsx    # Clickable advisor cards
+│   │   └── philosophy-section.tsx
 │   ├── services/
 │   │   └── page.tsx      # Complete services with strategies
 │   └── team/
@@ -83,11 +88,6 @@ src/
 │   ├── layout/           # Site structure
 │   │   ├── header.tsx    # Navigation with services link
 │   │   └── footer.tsx    # Site footer
-│   └── sections/         # Page sections
-│       ├── hero-section.tsx
-│       ├── about-section.tsx    # Clickable advisor cards
-│       ├── services-section.tsx # Portfolio Mgmt & Financial Planning
-│       └── philosophy-section.tsx
 └── lib/
     ├── advisors.ts       # SINGLE SOURCE OF TRUTH for advisor data
     └── utils.ts         # Utilities (cn, formatPhoneNumber)

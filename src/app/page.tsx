@@ -1,4 +1,4 @@
-import { HeroSection, ServicesSection, AboutSection, PhilosophySection } from "@/components/sections"
+import { HeroSection, ServicesSection, AboutSection, PhilosophySection } from "./sections"
 
 export default function HomePage() {
   return (
