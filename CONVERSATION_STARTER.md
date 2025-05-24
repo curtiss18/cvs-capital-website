@@ -1,69 +1,197 @@
-# Quick Start Conversation Prompt
+# CVS Capital Website - AI Conversation Starter
 
-Copy this prompt to start new conversations:
+**Copy this entire prompt to start new AI conversations about this project.**
 
 ---
 
-## CVS Capital Website Project
+## 🚨 CRITICAL INSTRUCTIONS FOR AI
 
-**Context:** Building a marketing website for CVS Capital investment advisory firm (Curtis & Creg Shaffer, under Institute for Wealth Management RIA).
+**⚠️ BEFORE DOING ANYTHING:**
+1. **READ DOCUMENTATION FIRST**: Review `README.md`, `ARCHITECTURE.md`, and `SETUP.md`
+2. **UNDERSTAND THE PROJECT**: This is a complete, production-ready financial advisory website
+3. **ASK BEFORE CODING**: Do NOT start coding until you discuss with me what we're working on next
+4. **FINRA COMPLIANCE**: This is a regulated financial services website - all content must be compliant
 
-**Current Status:** ✅ Phase 1 Complete - Production Ready
-- ✅ **Homepage** complete with Card components and advisor linking
-- ✅ **Services Page** complete with investment strategies and fee transparency 
-- ✅ **Team Page** complete with detailed profiles and FINRA compliance
-- ✅ **Card Component System** implemented across all pages
-- ✅ **Professional Design** - sage/cream palette, no unnecessary animations
-- ✅ **Navigation & Linking** - homepage advisor cards link to team profiles, service cards link to services page
-- ✅ **Shared advisor data** in `/src/lib/advisors.ts` (SINGLE SOURCE OF TRUTH)
-- ✅ **Next.js 14 + TypeScript + Tailwind** with custom design system
-- ✅ **Modular Section Architecture** - All pages split into co-located section components
+---
 
-**Project Path:** `C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website`
+## 📋 Project Overview
 
-**Critical Rules:**
-- NO TESTIMONIALS (FINRA compliance)
-- Rep as PM Model ONLY (CVS Capital operates exclusively as Rep as Portfolio Manager)
-- Creg V Shaffer featured first (Senior Adviser)
-- Curtis initials = "CLS" 
-- All content needs CCO approval
-- Form ADV Part 2A compliant
+**Project Name:** CVS Capital Website  
+**Type:** Professional marketing website for investment advisory firm  
+**Business:** Curtis & Creg Shaffer, operating under Institute for Wealth Management RIA  
+**Status:** ✅ **Phase 2 Complete - Full Production Ready**  
+**Location:** `C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website`
 
-**Key Files:**
-- **Advisor data**: `/src/lib/advisors.ts` (Creg V Shaffer, Curtis L Shaffer)
-- **Colors**: `/tailwind.config.ts` (sage/cream custom palette)
-- **Components**: `/src/components/ui/` (Card, Button, Section, etc.)
-- **Pages**: `/src/app/page.tsx`, `/src/app/services/page.tsx`, `/src/app/team/page.tsx`
+---
 
-**Advisor Contact Info:**
-- **Creg V Shaffer**: cregs@instituteforwealth.com, (775) 315-7594, CRD# 5070346
-- **Curtis L Shaffer**: curtis.shaffer@instituteforwealth.com, (775) 309-7092, CRD# 5601482
+## ✅ Current Project Status: COMPLETE & PRODUCTION READY
 
-**Next Priority:** Contact form implementation (dependencies already installed)
+### **Completed Pages (4 total)**
+- ✅ **Homepage** - Hero, services overview, advisor intro, philosophy
+- ✅ **Services Page** - Investment strategies, fee transparency, compliance
+- ✅ **Team Page** - Detailed advisor profiles with FINRA compliance
+- ✅ **Contact Page** - Lead qualification form with dual EmailJS integration
 
-**Ready Features:**
-- Form validation: React Hook Form + Zod
-- Email integration: EmailJS configured
-- Form components: Need to create Input, Textarea, Select for contact form
+### **Completed Systems**
+- ✅ **Card Component System** - Reusable across all pages
+- ✅ **Form Component System** - Input, Textarea, Select with validation
+- ✅ **Navigation System** - Complete site navigation with contact integration
+- ✅ **Analytics** - Vercel Analytics for privacy-focused tracking
+- ✅ **Email Integration** - Dual EmailJS (notification + auto-response)
+- ✅ **Design System** - Professional sage/cream palette
+- ✅ **Modular Architecture** - Co-located section components
 
-**Commands:**
+### **Technical Implementation**
+- ✅ **Framework**: Next.js 14 + TypeScript + Tailwind CSS
+- ✅ **Forms**: React Hook Form + Zod validation
+- ✅ **Email**: EmailJS dual-email system
+- ✅ **Analytics**: Vercel Analytics integrated
+- ✅ **Build Status**: All pages compile successfully (27.1kB contact page)
+- ✅ **Mobile Responsive**: Optimized for all devices
+- ✅ **SEO Optimized**: Proper metadata and semantic HTML
+
+---
+
+## 🏢 Business Information
+
+### **Office Details**
+- **Address**: 10775 Double R Blvd, Reno, NV 89521
+- **Hours**: Monday-Friday, 8:00 AM - 5:00 PM (Pacific Time)
+
+### **Advisor Information**
+- **Creg V Shaffer** (Senior Adviser, featured first)
+  - Email: cregs@instituteforwealth.com
+  - Phone: (775) 315-7594
+  - CRD# 5070346
+- **Curtis L Shaffer** (Technology Specialist, initials "CLS")
+  - Email: curtis.shaffer@instituteforwealth.com
+  - Phone: (775) 309-7092
+  - CRD# 5601482
+
+---
+
+## ⚖️ CRITICAL COMPLIANCE RULES
+
+### **FINRA Requirements (MUST FOLLOW)**
+- ❌ **NO TESTIMONIALS** - Strictly prohibited for regulatory compliance
+- ✅ **Rep as PM Model ONLY** - CVS Capital operates exclusively as Rep as Portfolio Manager
+- ✅ **Fee Transparency** - Maximum 2.00% clearly disclosed
+- ✅ **Form ADV Part 2A Compliant** - All services match regulatory filings
+- ✅ **Risk Disclosures** - Appropriate investment disclaimers included
+
+### **Content Requirements**
+- 🔍 **All content changes require CCO approval**
+- 📋 **Professional tone throughout** - Financial services appropriate
+- 🎯 **No investment advice claims** - Educational/informational only
+
+---
+
+## 📁 Key File Locations
+
+### **Core Data (SINGLE SOURCE OF TRUTH)**
+- **Advisor Data**: `/src/lib/advisors.ts` (Creg V Shaffer, Curtis L Shaffer)
+- **Colors**: `/tailwind.config.ts` (custom sage/cream palette)
+
+### **Pages**
+- **Homepage**: `/src/app/page.tsx`
+- **Services**: `/src/app/services/page.tsx`
+- **Team**: `/src/app/team/page.tsx`
+- **Contact**: `/src/app/contact/page.tsx`
+
+### **Components**
+- **UI Components**: `/src/components/ui/` (Card, Button, Section, Input, Textarea, Select)
+- **Layout**: `/src/components/layout/` (Header, Footer)
+
+### **Contact Form**
+- **Main Form**: `/src/app/contact/sections/contact-form.tsx`
+- **Features**: React Hook Form + Zod + EmailJS dual-email system
+- **Lead Qualification**: Investment goals and portfolio size capture
+
+---
+
+## 📚 Required Documentation Review
+
+**BEFORE starting any work, you MUST review:**
+
+1. **`README.md`** - Complete project overview and features
+2. **`ARCHITECTURE.md`** - Technical implementation details and patterns
+3. **`SETUP.md`** - Development setup and current status
+
+---
+
+## 🚀 Development Commands
+
 ```bash
+# Navigate to project
 cd "C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website"
+
+# Development server
 npm run dev
+
+# Test build
+npm run build
+
+# Lint check
+npm run lint
+
+# Type check
+npm run type-check
 ```
 
-**Instructions:** Please review README.md, ARCHITECTURE.md, and SETUP.md for full technical details before starting. Don't start coding until we discuss what to work on next.
+---
+
+## 🎯 Current Phase: Content Enhancement Ready
+
+### **Phase 2 Complete ✅**
+All core website functionality is implemented and production-ready:
+- Professional contact form with lead qualification
+- Complete site navigation and user flows
+- FINRA-compliant content across all pages
+- Responsive design and analytics integration
+
+### **Next Phase Opportunities**
+- Content enhancement (About page, additional service details)
+- Advanced features (blog system, newsletter integration)
+- Marketing integration (enhanced analytics, conversion tracking)
+- Performance optimization (advanced SEO, structured data)
 
 ---
 
-**Completed Work Summary:**
-- ✅ Complete professional website with 3 main pages using modular section architecture
-- ✅ FINRA-compliant content and structure  
-- ✅ Seamless navigation flow: hero CTAs → services page, service cards → core services, advisor cards → team profiles
-- ✅ Reusable Card component system for consistency
-- ✅ Professional sage/cream design system with responsive mobile optimization
-- ✅ Clean, maintainable codebase with sections co-located by page
-- ✅ SEO optimization and accessibility
-- ✅ Ready for contact form implementation
+## 🔄 Workflow Instructions
 
-**Project Status**: Production ready for Phase 1, ready for Phase 2 (contact form)
+### **1. Initial Review (REQUIRED)**
+- [ ] Read all documentation files listed above
+- [ ] Understand the project architecture and business requirements
+- [ ] Review FINRA compliance requirements
+- [ ] Understand the current complete status
+
+### **2. Discussion Phase (REQUIRED BEFORE CODING)**
+- [ ] Ask me what specific area we want to work on
+- [ ] Confirm understanding of requirements
+- [ ] Discuss approach and get approval
+- [ ] Only then proceed with implementation
+
+### **3. Development Standards**
+- Follow existing modular section architecture
+- Maintain FINRA compliance in all content
+- Use existing design system (sage/cream palette)
+- Test build success before completing work
+- Update documentation when making changes
+
+---
+
+## ⚠️ IMPORTANT REMINDERS
+
+1. **This is a COMPLETE, PRODUCTION-READY website** - not a work in progress
+2. **FINRA compliance is critical** - financial services regulations apply
+3. **All content needs CCO approval** - don't create marketing content without approval
+4. **Review documentation FIRST** - understand before suggesting changes
+5. **Ask before coding** - discuss the plan before implementing
+
+---
+
+**Project Status**: ✅ Phase 2 Complete - Full Production Ready  
+**Ready For**: Content enhancement, advanced features, ongoing maintenance  
+**Contact**: curtis.shaffer@instituteforwealth.com
+
+**🎯 Remember: READ DOCS → DISCUSS → THEN CODE**

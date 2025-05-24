@@ -1,0 +1,5 @@
+export { ContactHero } from './hero'
+export { ContactForm } from './contact-form'
+export { OfficeInfo } from './office-info'
+export { TeamDirect } from './team-direct'
+export { ContactCompliance } from './compliance'
