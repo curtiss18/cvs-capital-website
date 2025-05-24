@@ -162,24 +162,41 @@ interface Advisor {
 
 ## Page Architecture
 
+### Modular Section Pattern
+Each main page follows a consistent modular architecture with co-located sections:
+
 ### Homepage (`/src/app/page.tsx`)
-- **Hero Section**: Company introduction with professional CTAs
-- **Services Section**: Portfolio Management & Financial Planning cards
-- **About Section**: Clickable advisor cards linking to team profiles
+**Sections:** `hero.tsx`, `services.tsx`, `about.tsx`, `philosophy.tsx`
+- **Hero Section**: Main title with "Our Services" navigation button
+- **Services Section**: Portfolio Management & Financial Planning cards (link to services page)
+- **About Section**: Clickable advisor cards linking to team profiles  
 - **Philosophy Section**: Company approach and methodology
 
 ### Services Page (`/src/app/services/page.tsx`)
-- **Hero Section**: Service overview with matched outline buttons
-- **Core Services**: 4 main service areas using Card components
+**Sections:** `hero.tsx`, `core-services.tsx`, `strategies.tsx`, `process.tsx`, `fees.tsx`, `compliance.tsx`, `cta.tsx`
+- **Hero Section**: Services introduction with navigation CTAs
+- **Core Services**: 4 main service areas (anchor target for homepage links)
 - **Investment Strategies**: 6 detailed strategies with risk/minimum info
+- **Service Process**: 4-step process overview
 - **Fee Transparency**: Clear pricing with 2.00% maximum disclosed
-- **Compliance Section**: Credentials and regulatory info
+- **Compliance**: Credentials and regulatory information
+- **Call to Action**: Final engagement prompts
+- **Call to Action**: Final engagement prompts
 
 ### Team Page (`/src/app/team/page.tsx`)
-- **Hero Section**: Team introduction
-- **Stats Cards**: Experience and credentials using Card components
-- **Individual Profiles**: Detailed advisor information with anchor IDs
-- **Credentials Section**: FINRA compliance and BrokerCheck links
+**Sections:** `hero.tsx`, `overview.tsx`, `profiles.tsx`, `credentials.tsx`, `contact.tsx`
+- **Hero Section**: "Meet Our Team" introduction
+- **Team Overview**: Team description and experience statistics
+- **Advisor Profiles**: Detailed individual advisor information with anchor IDs
+- **Credentials**: FINRA compliance and BrokerCheck links
+- **Contact CTA**: Engagement prompts and direct contact information
+
+### Architecture Benefits
+- **Clean Main Pages**: Reduced from 400+ lines to 30-50 lines each
+- **Modular Development**: Individual sections can be developed and tested independently
+- **Consistent Navigation**: Seamless linking between pages with proper scroll offsets
+- **Easy Maintenance**: Updates to specific sections don't affect entire pages
+- **Scalable Pattern**: New pages can follow the same modular structure
 - **Contact CTA**: Professional engagement prompts
 
 ## SEO & Performance

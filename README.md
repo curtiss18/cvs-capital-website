@@ -10,7 +10,7 @@ CVS Capital is an independent investment advisory firm run by Curtis and Creg Sh
 - ✅ **Services Page** - Comprehensive service offerings, investment strategies, fee transparency
 - ✅ **Team Page** - Detailed advisor profiles with regulatory compliance and credentials
 - ✅ **Card Component System** - Reusable, professional card styling across all pages
-- ✅ **Navigation & Linking** - Seamless navigation with anchor linking and scroll offsets
+- ✅ **Navigation & Linking** - Complete navigation flow: hero CTA to services, service cards to core services, advisor cards to team profiles
 - ✅ **Shared Advisor Data** - Centralized data source (`/src/lib/advisors.ts`)
 - ✅ **Professional Design System** - Sage/cream color palette, clean typography
 - ✅ **Responsive Layout** - Mobile-first design with professional styling
@@ -70,7 +70,9 @@ Tech Stack: Next.js 14 + TypeScript + Tailwind CSS
 - **Team Page**: Individual advisor profiles, credentials, FINRA compliance information
 
 #### 🔗 **Navigation & UX**
-- **Anchor Linking**: Homepage advisor cards link to detailed Team page profiles
+- **Hero Navigation**: "Our Services" button links to services page with responsive mobile design
+- **Service Card Linking**: Portfolio Management and Financial Planning cards link to services core section
+- **Advisor Linking**: Homepage advisor cards link to detailed Team page profiles
 - **Scroll Offset**: Proper scroll positioning accounting for sticky header (scroll-mt-32)
 - **Professional CTAs**: Clear calls-to-action throughout the site
 
