@@ -40,20 +40,22 @@ export function ServicesSection() {
               <Card
                 key={index}
                 padding="xl"
-                className={`text-center ${service.clickable ? 'hover:shadow-xl transition-shadow duration-300 cursor-pointer' : ''}`}
+                className={`text-center h-full flex flex-col ${service.clickable ? 'hover:shadow-xl transition-shadow duration-300 cursor-pointer' : ''}`}
                 hover={service.clickable}
               >
-                <h3 className="text-2xl lg:text-3xl font-normal text-neutral-800 mb-6">
-                  {service.title}
-                </h3>
-                <p className="text-lg text-neutral-600 leading-relaxed">
-                  {service.description}
-                </p>
+                <div>
+                  <h3 className="text-2xl lg:text-3xl font-normal text-neutral-800 mb-6">
+                    {service.title}
+                  </h3>
+                  <p className="text-lg text-neutral-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </Card>
             )
 
             return service.clickable ? (
-              <Link key={index} href="/services#core-services">
+              <Link key={index} href="/services#core-services" className="h-full">
                 {cardContent}
               </Link>
             ) : (

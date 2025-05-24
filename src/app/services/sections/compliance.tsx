@@ -47,7 +47,7 @@ export function ComplianceCredentials() {
             <p className="text-sm text-neutral-600 leading-relaxed">
               Investment advisory services are provided through The Institute for Wealth Management, LLC, 
               an SEC-registered investment adviser. CVS Capital advisors are Investment Adviser Representatives 
-              of The Institute. All investments involve risk of loss and no investment strategy can guarantee profits. 
+              of The Institute for Wealth Management. All investments involve risk of loss and no investment strategy can guarantee profits. 
               Past performance does not guarantee future results. Please see our Form ADV Part 2A for important 
               disclosures about our services, fees, and conflicts of interest.
             </p>
