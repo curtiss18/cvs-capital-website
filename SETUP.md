@@ -2,46 +2,134 @@
 
 ## Quick Start
 1. Navigate to project: `cd "C:\Users\curti\OneDrive\Desktop\WebDev\cvs-capital-website"`
-2. Install dependencies: `npm install`
+2. Install dependencies: `npm install` (if not already done)
 3. Start dev server: `npm run dev`
 4. Open: `http://localhost:3000`
 
 ## Essential Commands
 ```bash
-npm run dev          # Development server
-npm run build        # Production build (test before deployment)
-npm run lint         # Check code quality
-npm run type-check   # TypeScript validation
+npm run dev          # Development server with hot reload
+npm run build        # Production build (ALWAYS test before pushing)
+npm run lint         # ESLint code quality check
+npm run type-check   # TypeScript validation (strict mode)
 ```
+
+## Current Project Status ✅
+- **Homepage**: Hero, Services, About (with advisor linking), Philosophy
+- **Services Page**: Complete with investment strategies, fees, compliance
+- **Team Page**: Individual profiles, credentials, FINRA compliance
+- **Card System**: Reusable components across all pages
+- **Navigation**: Professional header with services link
+- **Design**: Sage/cream palette, no unnecessary animations
 
 ## Key Development Notes
-- **All advisor data** is in `/src/lib/advisors.ts` - NEVER duplicate this data
-- **Color palette** is in `/tailwind.config.ts` - use sage/cream theme
-- **Mobile-first** design - test on all screen sizes
-- **TypeScript strict** - all components must be properly typed
-- **No console.log** in production code
 
-## Before Making Changes
-1. Read README.md for business context
-2. Check ARCHITECTURE.md for technical details
-3. Test build: `npm run build`
-4. Remember FINRA compliance rules (no testimonials)
+### ⚠️ Critical Rules
+- **All advisor data** is in `/src/lib/advisors.ts` - NEVER duplicate this data anywhere
+- **NO TESTIMONIALS** anywhere on the site (FINRA compliance)
+- **Rep as PM Model** - CVS Capital operates exclusively as Rep as Portfolio Manager
+- **Color palette** is in `/tailwind.config.ts` - use sage/cream theme consistently
+- **All content** needs CCO approval before going live
 
-## Component Development Pattern
-1. Create TypeScript interface for props
-2. Build mobile-first responsive design  
-3. Add to appropriate directory (`/ui/` for reusable, `/sections/` for page-specific)
-4. Test across breakpoints
-5. Validate with `npm run build`
+### 🎨 Design System
+- **Card Component**: Use `/src/components/ui/card.tsx` for all content cards
+- **Sage Colors**: sage-200 for borders, sage-400 for buttons, sage-600 for backgrounds
+- **Professional Styling**: No hover translations, clean design, minimal animations
+- **Mobile-First**: Always design for mobile, then scale up
 
-## File Structure
+### 📝 Content Guidelines
+- **Professional Tone**: Financial services appropriate language
+- **FINRA Compliant**: No marketing claims without compliance review
+- **Advisor Info**: Always pull from `/src/lib/advisors.ts`
+- **Fee Disclosure**: Maximum 2.00% clearly stated on Services page
+
+## Development Workflow
+
+### Before Making Changes
+1. **Read README.md** for business context and current status
+2. **Check ARCHITECTURE.md** for technical implementation details
+3. **Review current pages** to understand existing patterns
+4. **Test build**: `npm run build` to ensure no breaking changes
+
+### Component Development Pattern
+1. **TypeScript Interface**: Create proper interfaces for all props
+2. **Mobile-First Design**: Start with mobile layout, scale up
+3. **Use Card Component**: For any content cards, use existing Card component
+4. **Proper Directory**: `/ui/` for reusable, `/sections/` for page-specific
+5. **Test Everything**: Check responsiveness, TypeScript, build success
+
+### Adding New Features
+1. **Follow existing patterns**: Look at Services/Team pages for examples
+2. **Use existing components**: Card, Button, Section, Container
+3. **Maintain consistency**: Same padding, colors, typography
+4. **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Current File Structure
 ```
 src/
-├── app/                 # Pages (Next.js App Router)
-├── components/ui/       # Reusable components
-├── components/layout/   # Header, Footer
-├── components/sections/ # Page sections
-└── lib/advisors.ts     # Advisor data (SINGLE SOURCE)
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout with SEO
+│   ├── page.tsx          # Homepage with Card components
+│   ├── services/
+│   │   └── page.tsx      # Complete services with strategies
+│   └── team/
+│       └── page.tsx      # Team profiles with linking
+├── components/
+│   ├── ui/               # Reusable UI components
+│   │   ├── button.tsx    # 3 variants, professional styling
+│   │   ├── card.tsx      # Main content card component
+│   │   ├── container.tsx # Responsive width management
+│   │   ├── section.tsx   # Page section wrapper
+│   │   ├── input.tsx     # Form input (ready for contact form)
+│   │   ├── textarea.tsx  # Form textarea
+│   │   └── select.tsx    # Form select
+│   ├── layout/           # Site structure
+│   │   ├── header.tsx    # Navigation with services link
+│   │   └── footer.tsx    # Site footer
+│   └── sections/         # Page sections
+│       ├── hero-section.tsx
+│       ├── about-section.tsx    # Clickable advisor cards
+│       ├── services-section.tsx # Portfolio Mgmt & Financial Planning
+│       └── philosophy-section.tsx
+└── lib/
+    ├── advisors.ts       # SINGLE SOURCE OF TRUTH for advisor data
+    └── utils.ts         # Utilities (cn, formatPhoneNumber)
 ```
 
-*Ready for development!*
+## Ready for Next Phase
+
+### Contact Form Implementation (Phase 2)
+**Dependencies Already Installed:**
+- `react-hook-form`: Form state management
+- `zod`: Schema validation  
+- `emailjs-com`: Email service integration
+- Form components: Input, Textarea, Select already built
+
+### Future Enhancements
+- About page (company history)
+- Contact page with form
+- Legal/compliance pages
+- Newsletter integration
+- Blog system for market insights
+
+## Testing & Quality Assurance
+
+### Before Committing
+```bash
+npm run build        # Must pass without errors
+npm run lint         # Must pass ESLint checks  
+npm run type-check   # Must pass TypeScript validation
+```
+
+### Manual Testing Checklist
+- [ ] Test all pages on mobile, tablet, desktop
+- [ ] Verify advisor linking from homepage to team page
+- [ ] Check all navigation links work correctly
+- [ ] Confirm responsive design works properly
+- [ ] Validate content accuracy and compliance
+
+---
+**Setup Status**: ✅ Complete - Ready for development  
+**Current Phase**: Phase 1 Complete (Production Ready)  
+**Next Phase**: Contact Form Implementation  
+**Last Updated**: December 2024

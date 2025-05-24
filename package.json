@@ -1,13 +1,17 @@
 {
   "name": "cvs-capital-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Professional marketing website for CVS Capital investment advisory firm. Built with Next.js 14, TypeScript, and Tailwind CSS featuring FINRA-compliant content, investment strategies, and advisor profiles.",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
+  "keywords": ["cvs-capital", "investment-advisory", "financial-services", "next.js", "typescript", "finra-compliant"],
+  "author": "Curtis Shaffer",
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-icons": "^1.3.2",

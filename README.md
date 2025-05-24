@@ -3,15 +3,18 @@
 ## Project Overview
 CVS Capital is an independent investment advisory firm run by Curtis and Creg Shaffer, operating under the Institute for Wealth Management as their RIA. This website serves as the primary marketing platform for the firm.
 
-## Project Status: ✅ Active Development
+## Project Status: ✅ Production Ready (Phase 1 Complete)
 
-### Completed Components
-- ✅ **Homepage** - Hero, Services, About/Team, Philosophy sections
-- ✅ **Team Page** - Detailed advisor profiles with regulatory compliance
+### Completed Components ✅
+- ✅ **Homepage** - Hero, Services, About/Team, Philosophy sections with Card components
+- ✅ **Services Page** - Comprehensive service offerings, investment strategies, fee transparency
+- ✅ **Team Page** - Detailed advisor profiles with regulatory compliance and credentials
+- ✅ **Card Component System** - Reusable, professional card styling across all pages
+- ✅ **Navigation & Linking** - Seamless navigation with anchor linking and scroll offsets
 - ✅ **Shared Advisor Data** - Centralized data source (`/src/lib/advisors.ts`)
-- ✅ **Foundation Components** - Button, Container, Section, Header, Footer
-- ✅ **Design System** - Custom color palette, responsive design
-- ✅ **SEO Optimization** - Metadata, structured layout
+- ✅ **Professional Design System** - Sage/cream color palette, clean typography
+- ✅ **Responsive Layout** - Mobile-first design with professional styling
+- ✅ **SEO Optimization** - Metadata, structured layout, semantic HTML
 
 ### Current Architecture
 ```
@@ -19,109 +22,180 @@ src/
 ├── app/
 │   ├── layout.tsx           # Root layout with SEO
 │   ├── page.tsx            # Homepage
+│   ├── services/
+│   │   └── page.tsx        # Services page with investment strategies
 │   └── team/
-│       └── page.tsx        # Team page
+│       └── page.tsx        # Team page with detailed profiles
 ├── components/
-│   ├── ui/                 # Reusable UI components
-│   ├── layout/             # Header, Footer
+│   ├── ui/                 # Reusable UI components (Button, Card, etc.)
+│   ├── layout/             # Header, Footer with navigation
 │   └── sections/           # Page sections (Hero, About, etc.)
 ├── lib/
 │   ├── advisors.ts         # Shared advisor data (SINGLE SOURCE OF TRUTH)
-│   └── utils.ts           # Utility functions
+│   └── utils.ts           # Utility functions (cn, formatPhoneNumber)
 └── app/globals.css        # Global styles + Tailwind
 
 Tech Stack: Next.js 14 + TypeScript + Tailwind CSS
 ```
 
+### Key Features Implemented
+
+#### 🎨 **Design System**
+- **Card Component**: Reusable component with sage borders, hover effects, flexible padding
+- **Color Palette**: Professional sage greens (#888965, #ACAC94) and cream tones (#E9EBE4)
+- **Typography**: Clean Inter font system with professional hierarchy
+- **Professional Styling**: No unnecessary animations, clean hover states
+
+#### 📄 **Content Pages**
+- **Homepage**: Hero, services overview, advisor introductions, company philosophy
+- **Services Page**: Complete service offerings, investment strategies, fee structure, compliance
+- **Team Page**: Individual advisor profiles, credentials, FINRA compliance information
+
+#### 🔗 **Navigation & UX**
+- **Anchor Linking**: Homepage advisor cards link to detailed Team page profiles
+- **Scroll Offset**: Proper scroll positioning accounting for sticky header (scroll-mt-32)
+- **Professional CTAs**: Clear calls-to-action throughout the site
+
+#### 📊 **Investment Strategies Covered**
+- Global Impact (ESG-focused flagship strategy)
+- Global ESG Core (Socially responsible investing)
+- Sector Rotation (Rules-based tactical strategy)
+- Alternative Income (Reduced equity correlation)
+- Dynamic Equity Growth/Income (Concentrated stock strategies)
+- MoneyPlus (Duration management with income focus)
+
 ### Advisor Data Structure
 All advisor information is centralized in `/src/lib/advisors.ts`:
-- **Creg V. Shaffer** - Senior Investment Adviser (featured first)
-- **Curtis L. Shaffer** - Technology Sector Specialist
-- Includes: contact info, credentials, CRD numbers, expertise, philosophy
+- **Creg V Shaffer** - Senior Investment Adviser (featured first)
+  - MS in Economics, Iowa State University
+  - CRD# 5070346, Licensed since 2006
+  - Email: cregs@instituteforwealth.com
+- **Curtis L Shaffer** - Technology Sector Specialist  
+  - BS in Business Administration, Brigham Young University
+  - CRD# 5601482, Licensed since 2025
+  - Email: curtis.shaffer@instituteforwealth.com
 
 ## Key Business Rules & Compliance
 
 ### FINRA/NASAA Compliance Requirements
-- ❌ **NO TESTIMONIALS** - Removed for regulatory compliance
-- ✅ **Professional credentials** - CRD numbers, Series 65 info displayed
-- ✅ **FINRA BrokerCheck links** - Direct links to advisor profiles
-- ✅ **Transparent fee disclosure** - Clear fee structure information
+- ❌ **NO TESTIMONIALS** - Strictly avoided for regulatory compliance
+- ✅ **Professional credentials** - CRD numbers, Series 65 info prominently displayed
+- ✅ **FINRA BrokerCheck links** - Direct links to advisor verification profiles
+- ✅ **Transparent fee disclosure** - Maximum 2.00% annual fee clearly stated
 - ✅ **Risk disclosures** - Appropriate disclaimers and compliance language
+- ✅ **Rep as PM Model** - CVS Capital operates exclusively in Rep as Portfolio Manager model
+
 ### Content Approval Process
 - **All content changes** require approval from CCO at Institute for Wealth Management
 - **No marketing claims** without compliance review
 - **Professional tone** required throughout
+- **Form ADV Part 2A compliant** - All services match regulatory filings
 
 ### Brand Guidelines
 - **Color Palette**: Sage greens and cream tones (see `tailwind.config.ts`)
-- **Typography**: Clean, professional sans-serif fonts
-- **Tone**: Professional, trustworthy, client-focused
+- **Typography**: Clean, professional Inter font system
+- **Tone**: Professional, trustworthy, client-focused, FINRA-appropriate
 - **Style**: Matches Institute for Wealth Management aesthetic
 
 ## Development Standards
 
 ### Code Quality Standards
 - **TypeScript**: Strict typing, interfaces for all data structures
-- **ESLint**: Enforced linting rules, no console.log in production
-- **Component Architecture**: Reusable, well-documented components
-- **Single Source of Truth**: Centralized data management
-- **Mobile-First**: Responsive design for all components
+- **ESLint**: Enforced linting rules, clean code standards
+- **Component Architecture**: Reusable Card system, consistent styling
+- **Single Source of Truth**: Centralized advisor data management
+- **Mobile-First**: Responsive design for all screen sizes
+- **Performance**: Optimized images, minimal bundle size
+
+### Component Architecture
+```
+UI Components:
+├── Button (3 variants: primary, secondary, outline)
+├── Card (flexible padding, hover effects, sage borders)
+├── Container (responsive width management)
+├── Section (variant styling for different page sections)
+├── Input/Textarea/Select (form components for future contact form)
+└── Header/Footer (navigation and site structure)
+```
 
 ### File Naming Conventions
-- **Components**: PascalCase (`Button.tsx`, `HeroSection.tsx`)
-- **Files**: kebab-case (`advisor-data.ts`, `about-section.tsx`)
+- **Components**: PascalCase (`Button.tsx`, `Card.tsx`)
+- **Pages**: kebab-case (`services/page.tsx`)
 - **Directories**: lowercase (`components`, `sections`, `ui`)
 
-### Git Workflow
-- **Feature branches** for new functionality
-- **Descriptive commit messages**
-- **Test builds** before deployment
-- **Vercel deployment** from main branch
+## Next Phase Priorities
 
-## Current Priorities (In Order)
-
-### 1. Contact Functionality (Next Phase)
+### 1. Contact Form Implementation (Ready to Build)
 - Contact form with validation (React Hook Form + Zod)
 - EmailJS integration for form submissions
 - Lead capture for marketing purposes
 - Success/error states and user feedback
+- **Dependencies already installed**: react-hook-form, zod, emailjs-com
 
-### 2. Content Pages
-- Dedicated Services page
-- About page (expanded)
+### 2. Content Enhancement
+- About page (company history, mission)
 - Contact page with office information
-- Legal/compliance pages
+- Legal/compliance pages (privacy policy, terms)
 
-### 3. Blog System
-- Content management setup
-- Market insights and educational content
-- SEO-optimized blog structure
+### 3. Advanced Features
+- Blog system for market insights
+- Newsletter signup integration
+- Advanced SEO optimization
 
-## Key Contacts & Roles
-- **Curtis Shaffer**: Site maintainer, primary technical contact
-- **Creg Shaffer**: Senior advisor, content reviewer
-- **Institute for Wealth Management CCO**: Content approval authority
+## Technical Implementation Details
 
-## Important File Locations
+### Key Dependencies
+```json
+{
+  "next": "^15.3.2",
+  "react": "^19.0.0", 
+  "typescript": "^5",
+  "tailwindcss": "^3.4.1",
+  "react-hook-form": "^7.56.4",
+  "zod": "^3.25.27",
+  "emailjs-com": "^3.2.0"
+}
+```
+
+### Important File Locations
 - **Advisor Data**: `/src/lib/advisors.ts` (SINGLE SOURCE OF TRUTH)
-- **Color Palette**: `/tailwind.config.ts`
+- **Color Palette**: `/tailwind.config.ts` (custom sage/cream colors)
 - **Global Styles**: `/src/app/globals.css`
 - **Component Library**: `/src/components/ui/`
+- **Page Components**: `/src/app/*/page.tsx`
 
 ## Development Commands
 ```bash
-npm run dev          # Start development server
-npm run build        # Production build
-npm run lint         # Run ESLint
+npm run dev          # Start development server (http://localhost:3000)
+npm run build        # Production build with optimization
+npm run lint         # ESLint code quality check
 npm run type-check   # TypeScript validation
 ```
 
 ## Deployment
-- **Platform**: Vercel
-- **Domain**: TBD
+- **Platform**: Vercel (automatic deployments)
+- **Domain**: TBD (ready for custom domain setup)
 - **Build**: Automatic deployment from main branch
-- **Environment**: Production optimized
+- **Environment**: Production optimized with Next.js 14
+
+## Project Maintenance
+
+### Content Updates
+All advisor information updates should be made in `/src/lib/advisors.ts` as it propagates to:
+- Homepage about section
+- Team page individual profiles  
+- Team page credentials section
+- Any future pages referencing advisor data
+
+### Design System Updates
+The Card component (`/src/components/ui/card.tsx`) is used throughout:
+- Homepage service cards and advisor cards
+- Services page for all content sections
+- Team page for stats, profiles, and credentials
+- Any future content cards should use this component for consistency
 
 ---
-*Last Updated: Current session*
-*Maintainer: Curtis Shaffer*
+**Project Status**: ✅ Phase 1 Complete - Production Ready  
+**Last Updated**: December 2024  
+**Maintainer**: Curtis Shaffer  
+**Next Milestone**: Contact Form Implementation
