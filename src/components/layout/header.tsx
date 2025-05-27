@@ -65,9 +65,11 @@ export function Header() {
 
             {/* CTA Button + Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Button className="hidden sm:inline-flex">
-                Schedule Consultation
-              </Button>
+              <Link href="/contact" className="hidden sm:inline-flex">
+                <Button>
+                  Schedule Consultation
+                </Button>
+              </Link>
               
               {/* Mobile Menu Button */}
               <button
@@ -93,9 +95,11 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="w-full sm:hidden mt-4">
-                  Schedule Consultation
-                </Button>
+                <Link href="/contact" className="w-full sm:hidden mt-4" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full">
+                    Schedule Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
           )}
