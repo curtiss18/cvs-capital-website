@@ -30,8 +30,7 @@
 - **Professional Contact Form** with lead qualification:
   - Required: Name, Email, Phone, Message
   - Optional: Investment Goals, Portfolio Size, How did you hear about us?
-- **Dual EmailJS Integration**:
-  - Internal notification → curtis.shaffer@instituteforwealth.com
+- **Dual EmailJS (see `/docs/EMAILJS-COMPLETE-GUIDE.md`) Integration**:
   - Auto-response → User confirmation with next steps
 - **Office Information**: 10775 Double R Blvd, Reno, NV 89521
 - **Business Hours**: Monday-Friday, 8AM-5PM (Pacific Time)

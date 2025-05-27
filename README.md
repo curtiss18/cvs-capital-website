@@ -9,7 +9,7 @@ CVS Capital is an independent investment advisory firm run by Curtis and Creg Sh
 - ✅ **Homepage** - Hero, Services, About/Team, Philosophy sections with Card components
 - ✅ **Services Page** - Comprehensive service offerings, investment strategies, fee transparency
 - ✅ **Team Page** - Detailed advisor profiles with regulatory compliance and credentials
-- ✅ **Contact Page** - Professional contact form with lead qualification and dual EmailJS integration
+- ✅ **Contact Page** - Professional contact form with lead qualification and dual EmailJS integration (see `/docs/EMAILJS-COMPLETE-GUIDE.md`)
 - ✅ **Card Component System** - Reusable, professional card styling across all pages
 - ✅ **Form Component System** - Input, Textarea, Select components with validation
 - ✅ **Navigation & Linking** - Complete navigation flow across all pages
@@ -262,6 +262,17 @@ The Card component (`/src/components/ui/card.tsx`) is used throughout:
 - Services page for all content sections
 - Team page for stats, profiles, and credentials
 - Any future content cards should use this component for consistency
+
+## Documentation
+
+All project documentation is organized in the `/docs` directory:
+
+- **[ARCHITECTURE.md](./docs/ARCHITECTURE.md)** - Technical architecture and implementation details
+- **[SETUP.md](./docs/SETUP.md)** - Development setup and configuration guide
+- **[EMAILJS-COMPLETE-GUIDE.md](./docs/EMAILJS-COMPLETE-GUIDE.md)** - Complete email system documentation
+- **[CONVERSATION_STARTER.md](./docs/CONVERSATION_STARTER.md)** - AI conversation prompt for development
+- **[PROJECT_COMPLETE.md](./docs/PROJECT_COMPLETE.md)** - Phase 2 completion summary
+- **[PHASE1_COMPLETION.md](./docs/PHASE1_COMPLETION.md)** - Phase 1 completion archive
 
 ---
 **Project Status**: ✅ Phase 2 Complete - Full Production Ready  
