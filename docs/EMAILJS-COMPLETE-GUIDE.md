@@ -181,14 +181,6 @@ NEXT_PUBLIC_EMAILJS_AUTO_RESPONSE_TEMPLATE_ID="template_yyyyyyy"
 NEXT_PUBLIC_EMAILJS_USER_ID="user_zzzzzzzzzzzzz"
 ```
 
-**Current Development Configuration:**
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID="service_0vha8q6"
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID="template_d2i9d98"
-NEXT_PUBLIC_EMAILJS_AUTO_RESPONSE_TEMPLATE_ID="template_td11aca"
-NEXT_PUBLIC_EMAILJS_USER_ID="user_CEaUbFoVuyRLlj-k0"
-```
-
 ## Template Variables Reference
 
 The form sends these variables to EmailJS:
