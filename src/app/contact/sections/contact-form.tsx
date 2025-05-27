@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import emailjs from "emailjs-com"
@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectOption } from "@/components/ui/select"
+import { Checkbox } from "@/components/ui/checkbox"
 import { CheckCircle, AlertCircle, Send } from "lucide-react"
 
 // Form validation schema
@@ -19,7 +20,7 @@ const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  investmentGoals: z.string().optional(),
+  investmentGoals: z.array(z.string()).max(3, "Please select up to 3 investment goals").optional(),
   portfolioSize: z.string().optional(),
   hearAbout: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters")
@@ -28,14 +29,15 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 // Investment goals options
-const investmentGoalsOptions: SelectOption[] = [
-  { value: "retirement", label: "Retirement Planning" },
-  { value: "wealth-accumulation", label: "Wealth Accumulation" },
-  { value: "income-generation", label: "Income Generation" },
+const investmentGoalsOptions = [
   { value: "estate-planning", label: "Estate Planning" },
+  { value: "retirement-planning", label: "Retirement Planning" },
+  { value: "401k-rollover", label: "401K Rollover" },
+  { value: "roth-ira-conversion", label: "Roth IRA Conversion" },
   { value: "education-funding", label: "Education Funding" },
   { value: "tax-optimization", label: "Tax Optimization" },
-  { value: "other", label: "Other" }
+  { value: "income-generation", label: "Income Generation" },
+  { value: "alternative-investments", label: "Alternative Investments" }
 ]
 
 // Portfolio size options
@@ -65,11 +67,18 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
+    control,
+    watch,
     formState: { errors },
     reset
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema)
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      investmentGoals: []
+    }
   })
+
+  const selectedGoals = watch("investmentGoals") || []
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
@@ -82,15 +91,33 @@ export function ContactForm() {
       const autoResponseTemplateId = process.env.NEXT_PUBLIC_EMAILJS_AUTO_RESPONSE_TEMPLATE_ID || 'your_auto_response_template_id'
       const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || 'your_user_id'
 
+      // Format investment goals for email
+      const investmentGoalsFormatted = data.investmentGoals && data.investmentGoals.length > 0
+        ? data.investmentGoals.map(goal => {
+            const option = investmentGoalsOptions.find(opt => opt.value === goal)
+            return option?.label || goal
+          }).join(', ')
+        : 'Not specified'
+
+      // Format portfolio size for email
+      const portfolioSizeFormatted = data.portfolioSize 
+        ? portfolioSizeOptions.find(opt => opt.value === data.portfolioSize)?.label || data.portfolioSize
+        : 'Not specified'
+
+      // Format how they heard about us for email
+      const hearAboutFormatted = data.hearAbout
+        ? hearAboutOptions.find(opt => opt.value === data.hearAbout)?.label || data.hearAbout
+        : 'Not specified'
+
       // Prepare email data
       const emailData = {
-        to_email: 'curtis.shaffer@instituteforwealth.com',
+        // to_email is configured in EmailJS template, not sent from here
         from_name: data.name,
         from_email: data.email,
         phone: data.phone,
-        investment_goals: data.investmentGoals || 'Not specified',
-        portfolio_size: data.portfolioSize || 'Not specified',
-        hear_about: data.hearAbout || 'Not specified',
+        investment_goals: investmentGoalsFormatted,
+        portfolio_size: portfolioSizeFormatted,
+        hear_about: hearAboutFormatted,
         message: data.message,
         date_time: new Date().toLocaleString('en-US', {
           timeZone: 'America/Los_Angeles',
@@ -112,9 +139,9 @@ export function ContactForm() {
         from_name: data.name,
         from_email: data.email,
         phone: data.phone,
-        investment_goals: data.investmentGoals || 'Not specified',
-        portfolio_size: data.portfolioSize || 'Not specified',
-        hear_about: data.hearAbout || 'Not specified',
+        investment_goals: investmentGoalsFormatted,
+        portfolio_size: portfolioSizeFormatted,
+        hear_about: hearAboutFormatted,
         message: data.message,
         date_time: new Date().toLocaleString('en-US', {
           timeZone: 'America/Los_Angeles',
@@ -200,22 +227,56 @@ export function ContactForm() {
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Select
-                    label="Primary Investment Goals"
-                    placeholder="Select your main goal"
-                    options={investmentGoalsOptions}
-                    error={errors.investmentGoals?.message}
-                    {...register("investmentGoals")}
-                  />
-                  <Select
-                    label="Investment Portfolio Size"
-                    placeholder="Select range"
-                    options={portfolioSizeOptions}
-                    error={errors.portfolioSize?.message}
-                    {...register("portfolioSize")}
-                  />
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-neutral-700">
+                    Investment Goals
+                  </label>
+                  <p className="text-sm text-neutral-500">Select up to 3 goals</p>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <Controller
+                      name="investmentGoals"
+                      control={control}
+                      render={({ field }) => (
+                        <>
+                          {investmentGoalsOptions.map((option) => (
+                            <Checkbox
+                              key={option.value}
+                              label={option.label}
+                              checked={field.value?.includes(option.value)}
+                              disabled={
+                                !field.value?.includes(option.value) && 
+                                selectedGoals.length >= 3
+                              }
+                              onChange={(e) => {
+                                const checked = e.target.checked
+                                const currentValues = field.value || []
+                                
+                                if (checked) {
+                                  field.onChange([...currentValues, option.value])
+                                } else {
+                                  field.onChange(currentValues.filter(v => v !== option.value))
+                                }
+                              }}
+                            />
+                          ))}
+                        </>
+                      )}
+                    />
+                  </div>
+                  {errors.investmentGoals && (
+                    <p className="text-sm text-red-600" role="alert">
+                      {errors.investmentGoals.message}
+                    </p>
+                  )}
                 </div>
+
+                <Select
+                  label="Investment Portfolio Size"
+                  placeholder="Select range"
+                  options={portfolioSizeOptions}
+                  error={errors.portfolioSize?.message}
+                  {...register("portfolioSize")}
+                />
 
                 <Textarea
                   label="Message"

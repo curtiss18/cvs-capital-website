@@ -37,7 +37,7 @@
 - ✅ **Form Component System** - Input, Textarea, Select with validation
 - ✅ **Navigation System** - Complete site navigation with contact integration
 - ✅ **Analytics** - Vercel Analytics for privacy-focused tracking
-- ✅ **Email Integration** - Dual EmailJS (notification + auto-response)
+- ✅ **Email Integration** - Dual EmailJS (notification + auto-response) - see `/docs/EMAILJS-COMPLETE-GUIDE.md`
 - ✅ **Design System** - Professional sage/cream palette
 - ✅ **Modular Architecture** - Co-located section components
 
@@ -113,9 +113,9 @@
 
 **BEFORE starting any work, you MUST review:**
 
-1. **`README.md`** - Complete project overview and features
-2. **`ARCHITECTURE.md`** - Technical implementation details and patterns
-3. **`SETUP.md`** - Development setup and current status
+1. **`README.md`** - Complete project overview and features (in root directory)
+2. **`/docs/ARCHITECTURE.md`** - Technical implementation details and patterns
+3. **`/docs/SETUP.md`** - Development setup and current status
 
 ---
 
