@@ -11,6 +11,8 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  
+  // Restore client-side navigation for SPA behavior
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,10 +30,19 @@ export default function LoginPage() {
       if (response.ok) {
         setSuccess(true)
         setError('')
-        // Use router.push with adequate delay for cookie recognition
-        setTimeout(() => {
-          router.push('/')
-        }, 2000)
+        // Use Next.js router for client-side navigation to maintain SPA performance
+        setTimeout(async () => {
+          console.log('Starting navigation process...')
+          // Force refresh middleware state, then navigate
+          router.refresh()
+          console.log('Router refresh called')
+          // Small additional delay to ensure refresh completes
+          await new Promise(resolve => setTimeout(resolve, 200))
+          console.log('Attempting router.replace to /')
+          // Use replace instead of push to avoid back button issues
+          router.replace('/')
+          console.log('Router.replace called')
+        }, 1500)
       } else {
         setError('Invalid access code. Please check your credentials and try again.')
       }
