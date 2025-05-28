@@ -28,10 +28,10 @@ export default function LoginPage() {
       if (response.ok) {
         setSuccess(true)
         setError('')
-        // Small delay to show success message, then navigate using Next.js router
+        // Longer delay to allow cookie to be properly set before navigation
         setTimeout(() => {
           router.push('/')
-        }, 1000)
+        }, 2000)
       } else {
         setError('Invalid access code. Please check your credentials and try again.')
       }
