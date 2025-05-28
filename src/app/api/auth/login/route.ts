@@ -30,6 +30,7 @@ export async function POST(request: NextRequest) {
         maxAge: 7 * 24 * 60 * 60, // 7 days in seconds
         path: '/',
         sameSite: isProduction ? 'strict' : 'lax'
+        // Domain property omitted to let browser handle automatically
       })
       
       return response
