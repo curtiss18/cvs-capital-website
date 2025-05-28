@@ -5,12 +5,14 @@ export async function POST() {
     const response = NextResponse.json({ success: true })
     
     // Clear the auth cookie
+    const isProduction = process.env.NODE_ENV === 'production'
+    
     response.cookies.set('cvs-auth', '', {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isProduction,
       maxAge: 0, // Expire immediately
       path: '/',
-      sameSite: 'lax'
+      sameSite: isProduction ? 'strict' : 'lax'
     })
     
     return response

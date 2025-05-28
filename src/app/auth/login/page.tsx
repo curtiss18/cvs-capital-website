@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -10,6 +11,7 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -26,9 +28,9 @@ export default function LoginPage() {
       if (response.ok) {
         setSuccess(true)
         setError('')
-        // Small delay to show success message, then redirect
+        // Small delay to show success message, then navigate using Next.js router
         setTimeout(() => {
-          window.location.href = '/'
+          router.push('/')
         }, 1000)
       } else {
         setError('Invalid access code. Please check your credentials and try again.')

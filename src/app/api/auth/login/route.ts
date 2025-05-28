@@ -16,8 +16,13 @@ export async function POST(request: NextRequest) {
       const response = NextResponse.json({ success: true })
       
       // Set secure cookie (7 days)
-      const authToken = process.env.AUTH_TOKEN || 'cvs-compliance-authenticated'
+      const authToken = process.env.AUTH_TOKEN
       const isProduction = process.env.NODE_ENV === 'production'
+      
+      if (!authToken) {
+        console.error('AUTH_TOKEN environment variable not set')
+        return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
+      }
       
       response.cookies.set('cvs-auth', authToken, {
         httpOnly: true,

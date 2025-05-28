@@ -14,7 +14,13 @@ export function middleware(request: NextRequest) {
 
   // Check for auth cookie
   const authCookie = request.cookies.get('cvs-auth')
-  const expectedToken = process.env.AUTH_TOKEN || 'default-token'
+  const expectedToken = process.env.AUTH_TOKEN
+  
+  if (!expectedToken) {
+    console.error('AUTH_TOKEN environment variable not set')
+    // Redirect to login to prevent access with misconfigured auth
+    return NextResponse.redirect(new URL('/auth/login', request.url))
+  }
   
   if (!authCookie || authCookie.value !== expectedToken) {
     return NextResponse.redirect(new URL('/auth/login', request.url))

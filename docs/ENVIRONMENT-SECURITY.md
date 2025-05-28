@@ -43,12 +43,13 @@ For production deployment, add environment variables in Vercel dashboard:
 - Share credentials through secure channels (encrypted messages, password managers)
 - Never share via email, Slack, or other unsecured methods
 - Use `.env.example` as reference for required variables
+- **NEVER store actual credentials in documentation or committed files**
 
 ## For CVS Capital Compliance Review
 
 ### Current Credentials (SECURE - NOT IN REPO):
-- Compliance Password: `CVSCapital2025Review!`
-- Auth Token: `cvs-compliance-authenticated-token-2025`
+- Compliance Password: [Stored securely in .env.local only]
+- Auth Token: [Stored securely in .env.local only]
 
 ### When Going Public:
 1. Remove from `.env.local`:
@@ -66,6 +67,7 @@ For production deployment, add environment variables in Vercel dashboard:
 - [ ] Copy `.env.example` to `.env.local`
 - [ ] Fill in actual values (never commit these)
 - [ ] Verify `.env.local` not showing in `git status`
+- [ ] Ensure AUTH_TOKEN and COMPLIANCE_PASSWORD are set (required for auth to work)
 
 ### Production Deployment:
 - [ ] Add environment variables in Vercel dashboard
