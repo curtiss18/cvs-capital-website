@@ -31,8 +31,17 @@ export default function LoginPage() {
         setSuccess(true)
         setError('')
         // Use Next.js router for client-side navigation to maintain SPA performance
-        setTimeout(() => {
-          router.push('/')
+        setTimeout(async () => {
+          console.log('Starting navigation process...')
+          // Force refresh middleware state, then navigate
+          router.refresh()
+          console.log('Router refresh called')
+          // Small additional delay to ensure refresh completes
+          await new Promise(resolve => setTimeout(resolve, 200))
+          console.log('Attempting router.replace to /')
+          // Use replace instead of push to avoid back button issues
+          router.replace('/')
+          console.log('Router.replace called')
         }, 1500)
       } else {
         setError('Invalid access code. Please check your credentials and try again.')
