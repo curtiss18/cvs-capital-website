@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -10,6 +11,9 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  
+  // Restore client-side navigation for SPA behavior
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -26,9 +30,9 @@ export default function LoginPage() {
       if (response.ok) {
         setSuccess(true)
         setError('')
-        // Use window.location.href for reliable redirect in all environments
+        // Use Next.js router for client-side navigation to maintain SPA performance
         setTimeout(() => {
-          window.location.href = '/'
+          router.push('/')
         }, 1500)
       } else {
         setError('Invalid access code. Please check your credentials and try again.')
