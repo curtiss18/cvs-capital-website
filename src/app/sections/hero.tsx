@@ -30,7 +30,7 @@ export function HeroSection() {
                 <Link href="/contact" className="w-full sm:w-auto">
                   <Button 
                     size="lg"
-                    className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 text-base w-full"
+                    className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 text-base w-full border border-sage-600"
                   >
                     Schedule Consultation
                   </Button>
@@ -39,7 +39,7 @@ export function HeroSection() {
                   <Button 
                     variant="outline"
                     size="lg"
-                    className="px-8 py-4 text-base w-full border-sage-600 text-sage-700 hover:bg-sage-50"
+                    className="px-8 py-4 text-base w-full border-sage-600 text-sage-700 hover:bg-sage-50 hover:text-sage-700"
                   >
                     Explore Our Services
                   </Button>

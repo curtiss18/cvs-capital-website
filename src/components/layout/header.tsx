@@ -19,16 +19,16 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-sage-400 text-white py-2">
+      <div className="bg-sage-600 text-white py-2">
         <Container>
           <div className="flex justify-between items-center text-sm">
             <span>Main Office (303) 572-3500</span>
             <div className="hidden md:flex space-x-4">
-              <Link href="/team" className="hover:text-sage-100 transition-colors">
+              <Link href="/team" className="hover:text-sage-200 transition-colors">
                 Meet The Team
               </Link>
               <span>|</span>
-              <Link href="/contact" className="hover:text-sage-100 transition-colors">
+              <Link href="/contact" className="hover:text-sage-200 transition-colors">
                 Schedule Consultation
               </Link>
             </div>
@@ -42,7 +42,7 @@ export function Header() {
           <nav className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-500 rounded text-white flex items-center justify-center font-bold text-lg">
+              <div className="w-10 h-10 bg-gradient-to-br from-sage-700 to-sage-500 rounded text-white flex items-center justify-center font-bold text-lg">
                 CVS
               </div>
               <span className="text-xl font-light tracking-[3px] text-neutral-800 uppercase">
@@ -56,7 +56,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-neutral-700 hover:text-sage-400 font-medium tracking-wide uppercase text-sm transition-colors"
+                  className="text-neutral-700 hover:text-sage-600 font-medium tracking-wide uppercase text-sm transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -66,7 +66,7 @@ export function Header() {
             {/* CTA Button + Mobile Menu */}
             <div className="flex items-center space-x-4">
               <Link href="/contact" className="hidden sm:inline-flex">
-                <Button>
+                <Button className="bg-sage-600 hover:bg-sage-700 text-white">
                   Schedule Consultation
                 </Button>
               </Link>
@@ -74,7 +74,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-neutral-700 hover:text-sage-400 transition-colors"
+                className="lg:hidden p-2 text-neutral-700 hover:text-sage-600 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -89,14 +89,14 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-neutral-700 hover:text-sage-400 font-medium tracking-wide uppercase text-sm transition-colors"
+                    className="text-neutral-700 hover:text-sage-600 font-medium tracking-wide uppercase text-sm transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
                 <Link href="/contact" className="w-full sm:hidden mt-4" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full">
+                  <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                     Schedule Consultation
                   </Button>
                 </Link>
