@@ -185,7 +185,10 @@ export function ContactForm() {
                 <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-medium text-neutral-800 mb-2">Message Sent!</h3>
                 <p className="text-neutral-600 mb-6">{submitMessage}</p>
-                <Button onClick={() => setSubmitStatus('idle')}>
+                <Button 
+                  onClick={() => setSubmitStatus('idle')}
+                  className="bg-sage-600 hover:bg-sage-700 text-white"
+                >
                   Send Another Message
                 </Button>
               </div>
@@ -298,7 +301,7 @@ export function ContactForm() {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full"
+                  className="w-full bg-sage-600 hover:bg-sage-700 text-white"
                 >
                   {isSubmitting ? (
                     "Sending Message..."
