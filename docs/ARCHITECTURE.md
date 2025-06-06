@@ -141,14 +141,7 @@ const contactFormSchema = z.object({
 - **EmailJS Dual-Email**: Internal notification + auto-response
 - **Lead Qualification**: Investment goals and portfolio size capture
 - **Professional UX**: Loading states, success confirmation, error handling
-```typescript
-// /src/components/ui/card.tsx
-interface CardProps {
-  padding?: "sm" | "md" | "lg" | "xl"
-  hover?: boolean  // Controls shadow enhancement
-  className?: string
-}
-```
+
 - **Usage**: All content cards across the site
 - **Styling**: White background, sage-200 borders, shadow-lg, hover:shadow-xl
 - **Flexible**: Configurable padding and hover effects
@@ -228,25 +221,24 @@ Each main page follows a consistent modular architecture with co-located section
 
 ### Homepage (`/src/app/page.tsx`)
 **Sections:** `hero.tsx`, `services.tsx`, `about.tsx`, `philosophy.tsx`
-- **Hero Section**: Main title with "Our Services" navigation button
+- **Hero Section**: Sophisticated messaging emphasizing CVS Capital's risk-first philosophy and discretionary management approach
 - **Services Section**: Portfolio Management & Financial Planning cards (link to services page)
 - **About Section**: Clickable advisor cards linking to team profiles  
 - **Philosophy Section**: Company approach and methodology
 
 ### Services Page (`/src/app/services/page.tsx`)
 **Sections:** `hero.tsx`, `core-services.tsx`, `strategies.tsx`, `process.tsx`, `fees.tsx`, `compliance.tsx`, `cta.tsx`
-- **Hero Section**: Services introduction with navigation CTAs
+- **Hero Section**: Tailored messaging focusing on investment management, retirement planning, and financial planning with service category preview icons
 - **Core Services**: 4 main service areas (anchor target for homepage links)
 - **Investment Strategies**: 6 detailed strategies with risk/minimum info
 - **Service Process**: 4-step process overview
 - **Fee Transparency**: Clear pricing with 2.00% maximum disclosed
 - **Compliance**: Credentials and regulatory information
 - **Call to Action**: Final engagement prompts
-- **Call to Action**: Final engagement prompts
 
 ### Team Page (`/src/app/team/page.tsx`)
 **Sections:** `hero.tsx`, `overview.tsx`, `profiles.tsx`, `credentials.tsx`, `contact.tsx`
-- **Hero Section**: "Meet Our Team" introduction
+- **Hero Section**: Sophisticated messaging highlighting independent advisory approach and Institute for Wealth Management partnership
 - **Team Overview**: Team description and experience statistics
 - **Advisor Profiles**: Detailed individual advisor information with anchor IDs
 - **Credentials**: FINRA compliance and BrokerCheck links
@@ -254,7 +246,7 @@ Each main page follows a consistent modular architecture with co-located section
 
 ### Contact Page (`/src/app/contact/page.tsx`) ✅
 **Sections:** `hero.tsx`, `contact-form.tsx`, `office-info.tsx`, `team-direct.tsx`, `compliance.tsx`
-- **Hero Section**: Professional contact page introduction
+- **Hero Section**: Streamlined, conversion-optimized messaging focusing on discussing financial goals
 - **Contact Form**: Lead qualification form with EmailJS dual-email integration
 - **Office Information**: Reno address, business hours, main contact methods
 - **Team Direct Contact**: Individual advisor contact cards with clickable phone/email
@@ -263,12 +255,14 @@ Each main page follows a consistent modular architecture with co-located section
 ### Architecture Benefits ✅
 - **Clean Main Pages**: Reduced from 400+ lines to 30-50 lines each
 - **Modular Development**: Individual sections can be developed and tested independently
+- **Sophisticated Hero Sections**: High net worth focused messaging with unique content per page
 - **Complete Navigation**: Seamless linking between all pages with proper scroll offsets
 - **Lead Generation**: Professional contact form with qualification and dual-email system
 - **Easy Maintenance**: Updates to specific sections don't affect entire pages
 - **Scalable Pattern**: New pages can follow the same modular structure
 - **Form Reusability**: Input, Textarea, Select components can be used across the site
 - **FINRA Compliance**: Built-in compliance features and appropriate disclaimers
+- **Conversion Optimization**: Contact page streamlined for maximum conversion
 
 ## SEO & Performance
 
@@ -349,7 +343,8 @@ const contactFormSchema = z.object({
 - **CCO Approval Process**: All content requires compliance review
 
 ---
-**Architecture Status**: ✅ Complete - All Core Features Implemented  
-**Last Updated**: May 2025 
+**Architecture Status**: ✅ Complete - All Core Features Implemented + Enhanced Hero Sections  
+**Last Updated**: June 2025 
+**Latest Enhancement**: Sophisticated hero sections optimized for high net worth investors
 **Next Phase**: Content Enhancement & Advanced Features  
 **Maintainer**: Curtis Shaffer
