@@ -7,7 +7,7 @@ export function ContactHero() {
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl lg:text-5xl font-light text-neutral-800 mb-6">
-            Let's Discuss Your<br />
+            Let&apos;s Discuss Your<br />
             <span className="text-sage-700">Financial Goals</span>
           </h1>
           <p className="text-lg text-neutral-600 leading-relaxed">

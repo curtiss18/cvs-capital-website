@@ -18,7 +18,7 @@ export function TeamHero() {
           </p>
           <p className="text-lg text-neutral-500 max-w-4xl mx-auto">
             At CVS Capital, our mission is to define a clear path forward and deliver the confidence 
-            that comes from understanding how to achieve what matters most to you and your family's future.
+            that comes from understanding how to achieve what matters most to you and your family&apos;s future.
           </p>
         </div>
       </Container>

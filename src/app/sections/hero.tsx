@@ -59,7 +59,7 @@ export function HeroSection() {
                 <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-sage-300/50 shadow-lg">
                   <h3 className="text-lg font-semibold text-sage-700 mb-2">Personalized Strategies</h3>
                   <p className="text-neutral-600 text-sm">
-                    Customized investment solutions for your life's important goals
+                    Customized investment solutions for your life&apos;s important goals
                   </p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-sage-300/50 shadow-lg">
